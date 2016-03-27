@@ -321,8 +321,76 @@
  write a method to rotate the image by 90 degrees. Can you do this in place?
  */
 
-+ (void)rotateImageMatrix:(id)imageMatrix {
-    
++ (void)rotateImageMatrix:(int **)imageMatrix withN:(int)N {
+    if (!imageMatrix || N <= 1) {
+        return;
+    }
+    for (int layerIdx=0; layerIdx<N/2; layerIdx++) {
+        /**
+         int topRow = layerIdx;
+         int rightCol = N-layerIdx-1;
+         int bottomRow = N-layerIdx-1;
+         int leftCol = layerIdx;
+         // rotate top and right
+         for (int i=0; i<N-1; i++) {
+            [self swipeA:imageMatrix[topRow]+i andB:imageMatrix[i]+rightCol];
+            [self swipeA:imageMatrix[topRow]+i andB:imageMatrix[bottomRow]+N-1-i];
+            [self swipeA:imageMatrix[topRow]+i andB:imageMatrix[N-i-1]+leftCol];
+         }
+         */
+        int first = layerIdx;
+        int last = N - layerIdx - 1;
+        for (int i=first; i<last; i++) {
+            int offset = i - first;
+            int top = imageMatrix[first][i];
+            imageMatrix[first][i] = imageMatrix[last - offset][first];
+            imageMatrix[last-offset][first] = imageMatrix[last][last-offset];
+            imageMatrix[last][last-offset] = imageMatrix[i][last];
+            imageMatrix[i][last] = top;
+        }
+    }
+}
+
++ (void)swipeA:(int *)a andB:(int *)b {
+    int tmp = *a;
+    *a = *b;
+    *b = tmp;
+}
+
+/**
+ Write an algorithm such that if an element in an MxN matrix is 0, 
+ its entire row and column are set to 0.
+ */
+
++ (void)setRelativeRowAndColumnOfMatrix:(int **)matrix toZeroWithRow:(int)M andColumn:(int)N {
+    if (!matrix || !M || !N) {
+        return;
+    }
+    /**
+     To make this somewhat more space efficient, 
+     we could use a bit vector instead of a boolean array.
+     */
+    bool *zeroRows = (bool *)malloc(sizeof(bool) * M);
+    bool *zeroColumns = (bool *)malloc(sizeof(bool) * N);
+    memset(zeroRows, 0, sizeof(bool) * M);
+    memset(zeroColumns, 0, sizeof(bool) * N);
+    // scan the matrix
+    for (int row=0; row<M; row++) {
+        for (int col=0; col<N; col++) {
+            if (!matrix[row][col]) {
+                zeroRows[row] = true;
+                zeroColumns[col] = true;
+            }
+        }
+    }
+    // set row to zero
+    for (int row=0; row<M; row++) {
+        for (int col=0; col<N; col++) {
+            if (zeroRows[row] || zeroColumns[col]) {
+                matrix[row][col] = 0;
+            }
+        }
+    }
 }
 
 /**
@@ -332,7 +400,17 @@
  */
 
 + (BOOL)isString:(NSString *)thisString rotationOfString:(NSString *)thatString {
-    return YES;
+    /**
+     - ask rotation point
+     - xy -> yx
+     - yx is ALWAYS substring of xyxy
+     - S2 is ALWAYS substring of S1S1
+     */
+    if (!thisString || !thatString || (thisString.length != thatString.length)) {
+        return NO;
+    }
+    NSString *doubleThatString = [thatString stringByAppendingString:thatString];
+    return [doubleThatString containsString:thisString];
 }
 
 @end

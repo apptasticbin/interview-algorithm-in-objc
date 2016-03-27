@@ -19,5 +19,8 @@
 + (BOOL)countedString:(NSString *)permutationString isPermutationOfString:(NSString *)theString;
 + (void)escapeSpacesInString:(char *)theString withLength:(int)length;
 + (char *)compressString:(char *)theString;
++ (void)rotateImageMatrix:(int **)imageMatrix withN:(int)N;
++ (void)setRelativeRowAndColumnOfMatrix:(int **)matrix toZeroWithRow:(int)M andColumn:(int)N;
++ (BOOL)isString:(NSString *)thisString rotationOfString:(NSString *)thatString;
 
 @end
