@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CrackingDataStructures : NSObject
+@interface CrackingArraysAndStrings : NSObject
 
 + (BOOL)stringHasAllUniqueCharacters:(NSString *)theString;
 + (BOOL)stringHasAllUniqueCharactersBetter:(NSString *)theString;

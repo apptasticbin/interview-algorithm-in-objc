@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79689AF11CA877D00078DCB7 /* CrackingArraysAndStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 79689AF01CA877D00078DCB7 /* CrackingArraysAndStrings.m */; };
 		79C5DC201CA2B8FC005DFD1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C5DC1F1CA2B8FC005DFD1B /* main.m */; };
 		79C5DC231CA2B8FC005DFD1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C5DC221CA2B8FC005DFD1B /* AppDelegate.m */; };
 		79C5DC261CA2B8FC005DFD1B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C5DC251CA2B8FC005DFD1B /* ViewController.m */; };
 		79C5DC291CA2B8FC005DFD1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79C5DC271CA2B8FC005DFD1B /* Main.storyboard */; };
 		79C5DC2B1CA2B8FC005DFD1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79C5DC2A1CA2B8FC005DFD1B /* Assets.xcassets */; };
 		79C5DC2E1CA2B8FC005DFD1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79C5DC2C1CA2B8FC005DFD1B /* LaunchScreen.storyboard */; };
-		79C5DC4A1CA2BA30005DFD1B /* CrackingDataStructures.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C5DC491CA2BA30005DFD1B /* CrackingDataStructures.m */; };
-		79C5DC4B1CA2BA30005DFD1B /* CrackingDataStructures.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C5DC491CA2BA30005DFD1B /* CrackingDataStructures.m */; };
-		79C5DC4F1CA2BB55005DFD1B /* CrackingDataStructuresTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C5DC4E1CA2BB55005DFD1B /* CrackingDataStructuresTest.m */; };
+		79C5DC4F1CA2BB55005DFD1B /* CrackingArraysAndStringsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C5DC4E1CA2BB55005DFD1B /* CrackingArraysAndStringsTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		79689AEF1CA877D00078DCB7 /* CrackingArraysAndStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrackingArraysAndStrings.h; sourceTree = "<group>"; };
+		79689AF01CA877D00078DCB7 /* CrackingArraysAndStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrackingArraysAndStrings.m; sourceTree = "<group>"; };
 		79C5DC1B1CA2B8FC005DFD1B /* interview-algorithm-in-objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "interview-algorithm-in-objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C5DC1F1CA2B8FC005DFD1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		79C5DC211CA2B8FC005DFD1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -41,9 +42,7 @@
 		79C5DC2F1CA2B8FC005DFD1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79C5DC341CA2B8FC005DFD1B /* interview-algorithm-in-objcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "interview-algorithm-in-objcTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C5DC3A1CA2B8FC005DFD1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		79C5DC481CA2BA30005DFD1B /* CrackingDataStructures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrackingDataStructures.h; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingDataStructures.h; sourceTree = "<group>"; };
-		79C5DC491CA2BA30005DFD1B /* CrackingDataStructures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingDataStructures.m; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingDataStructures.m; sourceTree = "<group>"; };
-		79C5DC4E1CA2BB55005DFD1B /* CrackingDataStructuresTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingDataStructuresTest.m; path = CrackingTheCodingInterviewTests/CrackingDataStructuresTest/CrackingDataStructuresTest.m; sourceTree = "<group>"; };
+		79C5DC4E1CA2BB55005DFD1B /* CrackingArraysAndStringsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingArraysAndStringsTest.m; path = CrackingTheCodingInterviewTests/CrackingDataStructuresTest/CrackingArraysAndStringsTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +63,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79689AEE1CA877D00078DCB7 /* CrackingArraysAndStrings */ = {
+			isa = PBXGroup;
+			children = (
+				79689AEF1CA877D00078DCB7 /* CrackingArraysAndStrings.h */,
+				79689AF01CA877D00078DCB7 /* CrackingArraysAndStrings.m */,
+			);
+			name = CrackingArraysAndStrings;
+			path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingArraysAndStrings;
+			sourceTree = "<group>";
+		};
 		79C5DC121CA2B8FC005DFD1B = {
 			isa = PBXGroup;
 			children = (
@@ -151,8 +160,7 @@
 		79C5DC471CA2B9AD005DFD1B /* CrackingDataStructures */ = {
 			isa = PBXGroup;
 			children = (
-				79C5DC481CA2BA30005DFD1B /* CrackingDataStructures.h */,
-				79C5DC491CA2BA30005DFD1B /* CrackingDataStructures.m */,
+				79689AEE1CA877D00078DCB7 /* CrackingArraysAndStrings */,
 			);
 			name = CrackingDataStructures;
 			sourceTree = "<group>";
@@ -168,7 +176,7 @@
 		79C5DC4D1CA2BB01005DFD1B /* CrackingDataStructuresTest */ = {
 			isa = PBXGroup;
 			children = (
-				79C5DC4E1CA2BB55005DFD1B /* CrackingDataStructuresTest.m */,
+				79C5DC4E1CA2BB55005DFD1B /* CrackingArraysAndStringsTest.m */,
 			);
 			name = CrackingDataStructuresTest;
 			sourceTree = "<group>";
@@ -275,8 +283,8 @@
 			files = (
 				79C5DC261CA2B8FC005DFD1B /* ViewController.m in Sources */,
 				79C5DC231CA2B8FC005DFD1B /* AppDelegate.m in Sources */,
+				79689AF11CA877D00078DCB7 /* CrackingArraysAndStrings.m in Sources */,
 				79C5DC201CA2B8FC005DFD1B /* main.m in Sources */,
-				79C5DC4A1CA2BA30005DFD1B /* CrackingDataStructures.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,8 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79C5DC4F1CA2BB55005DFD1B /* CrackingDataStructuresTest.m in Sources */,
-				79C5DC4B1CA2BA30005DFD1B /* CrackingDataStructures.m in Sources */,
+				79C5DC4F1CA2BB55005DFD1B /* CrackingArraysAndStringsTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +471,7 @@
 				79C5DC3F1CA2B8FC005DFD1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79C5DC401CA2B8FC005DFD1B /* Build configuration list for PBXNativeTarget "interview-algorithm-in-objcTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +480,7 @@
 				79C5DC421CA2B8FC005DFD1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

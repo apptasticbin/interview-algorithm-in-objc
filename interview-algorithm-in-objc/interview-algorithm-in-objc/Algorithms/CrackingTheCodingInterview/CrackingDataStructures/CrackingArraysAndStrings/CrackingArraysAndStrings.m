@@ -6,9 +6,9 @@
 //  Copyright © 2016 Bin Yu. All rights reserved.
 //
 
-#import "CrackingDataStructures.h"
+#import "CrackingArraysAndStrings.h"
 
-@implementation CrackingDataStructures
+@implementation CrackingArraysAndStrings
 
 
 #pragma mark - Array And Strings
