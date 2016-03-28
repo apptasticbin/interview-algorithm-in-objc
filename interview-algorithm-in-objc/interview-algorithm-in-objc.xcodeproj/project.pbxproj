@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		79689AF11CA877D00078DCB7 /* CrackingArraysAndStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 79689AF01CA877D00078DCB7 /* CrackingArraysAndStrings.m */; };
+		79689AF51CA878AE0078DCB7 /* CrackingLinkedLists.m in Sources */ = {isa = PBXBuildFile; fileRef = 79689AF41CA878AE0078DCB7 /* CrackingLinkedLists.m */; };
+		79689AF61CA878AE0078DCB7 /* CrackingLinkedLists.m in Sources */ = {isa = PBXBuildFile; fileRef = 79689AF41CA878AE0078DCB7 /* CrackingLinkedLists.m */; };
+		79689AF81CA878CB0078DCB7 /* CrackingLinkedListsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79689AF71CA878CB0078DCB7 /* CrackingLinkedListsTest.m */; };
+		79689AFC1CA882B10078DCB7 /* LinkedListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79689AFB1CA882B10078DCB7 /* LinkedListNode.m */; };
+		79689AFD1CA882B10078DCB7 /* LinkedListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79689AFB1CA882B10078DCB7 /* LinkedListNode.m */; };
 		79C5DC201CA2B8FC005DFD1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C5DC1F1CA2B8FC005DFD1B /* main.m */; };
 		79C5DC231CA2B8FC005DFD1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C5DC221CA2B8FC005DFD1B /* AppDelegate.m */; };
 		79C5DC261CA2B8FC005DFD1B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C5DC251CA2B8FC005DFD1B /* ViewController.m */; };
@@ -30,6 +35,11 @@
 /* Begin PBXFileReference section */
 		79689AEF1CA877D00078DCB7 /* CrackingArraysAndStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrackingArraysAndStrings.h; sourceTree = "<group>"; };
 		79689AF01CA877D00078DCB7 /* CrackingArraysAndStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrackingArraysAndStrings.m; sourceTree = "<group>"; };
+		79689AF31CA878AE0078DCB7 /* CrackingLinkedLists.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrackingLinkedLists.h; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingLinkedLists/CrackingLinkedLists.h; sourceTree = "<group>"; };
+		79689AF41CA878AE0078DCB7 /* CrackingLinkedLists.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingLinkedLists.m; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingLinkedLists/CrackingLinkedLists.m; sourceTree = "<group>"; };
+		79689AF71CA878CB0078DCB7 /* CrackingLinkedListsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingLinkedListsTest.m; path = CrackingTheCodingInterviewTests/CrackingDataStructuresTest/CrackingLinkedListsTest.m; sourceTree = "<group>"; };
+		79689AFA1CA882B10078DCB7 /* LinkedListNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinkedListNode.h; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingLinkedLists/LinkedListNode/LinkedListNode.h; sourceTree = "<group>"; };
+		79689AFB1CA882B10078DCB7 /* LinkedListNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinkedListNode.m; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingLinkedLists/LinkedListNode/LinkedListNode.m; sourceTree = "<group>"; };
 		79C5DC1B1CA2B8FC005DFD1B /* interview-algorithm-in-objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "interview-algorithm-in-objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C5DC1F1CA2B8FC005DFD1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		79C5DC211CA2B8FC005DFD1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +81,25 @@
 			);
 			name = CrackingArraysAndStrings;
 			path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingArraysAndStrings;
+			sourceTree = "<group>";
+		};
+		79689AF21CA878450078DCB7 /* CrackingLinkedLists */ = {
+			isa = PBXGroup;
+			children = (
+				79689AF31CA878AE0078DCB7 /* CrackingLinkedLists.h */,
+				79689AF41CA878AE0078DCB7 /* CrackingLinkedLists.m */,
+				79689AF91CA8828B0078DCB7 /* LInkedListNode */,
+			);
+			name = CrackingLinkedLists;
+			sourceTree = "<group>";
+		};
+		79689AF91CA8828B0078DCB7 /* LInkedListNode */ = {
+			isa = PBXGroup;
+			children = (
+				79689AFA1CA882B10078DCB7 /* LinkedListNode.h */,
+				79689AFB1CA882B10078DCB7 /* LinkedListNode.m */,
+			);
+			name = LInkedListNode;
 			sourceTree = "<group>";
 		};
 		79C5DC121CA2B8FC005DFD1B = {
@@ -161,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				79689AEE1CA877D00078DCB7 /* CrackingArraysAndStrings */,
+				79689AF21CA878450078DCB7 /* CrackingLinkedLists */,
 			);
 			name = CrackingDataStructures;
 			sourceTree = "<group>";
@@ -177,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				79C5DC4E1CA2BB55005DFD1B /* CrackingArraysAndStringsTest.m */,
+				79689AF71CA878CB0078DCB7 /* CrackingLinkedListsTest.m */,
 			);
 			name = CrackingDataStructuresTest;
 			sourceTree = "<group>";
@@ -281,7 +312,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79689AF51CA878AE0078DCB7 /* CrackingLinkedLists.m in Sources */,
 				79C5DC261CA2B8FC005DFD1B /* ViewController.m in Sources */,
+				79689AFC1CA882B10078DCB7 /* LinkedListNode.m in Sources */,
 				79C5DC231CA2B8FC005DFD1B /* AppDelegate.m in Sources */,
 				79689AF11CA877D00078DCB7 /* CrackingArraysAndStrings.m in Sources */,
 				79C5DC201CA2B8FC005DFD1B /* main.m in Sources */,
@@ -292,6 +325,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79689AFD1CA882B10078DCB7 /* LinkedListNode.m in Sources */,
+				79689AF81CA878CB0078DCB7 /* CrackingLinkedListsTest.m in Sources */,
+				79689AF61CA878AE0078DCB7 /* CrackingLinkedLists.m in Sources */,
 				79C5DC4F1CA2BB55005DFD1B /* CrackingArraysAndStringsTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
