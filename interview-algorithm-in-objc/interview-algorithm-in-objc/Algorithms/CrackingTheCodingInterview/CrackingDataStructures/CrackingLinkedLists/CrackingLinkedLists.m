@@ -324,16 +324,121 @@
  Output:C
  */
 
-- (LinkedListNode *)findBeginningLoopNodeInList:(LinkedListNode *)headList {
-    return nil;
++ (LinkedListNode *)findBeginningNodeOfLoopInList:(LinkedListNode *)headList {
+    // no loop in  empty list or single-node list
+    if (!headList || !headList.next) {
+        return nil;
+    }
+    NSMutableSet *counter = [NSMutableSet set];
+    while (headList) {
+        if (![counter containsObject:headList]) {
+            [counter addObject:headList];
+        } else {
+            break;
+        }
+        headList = headList.next;
+    }
+    return headList;
+}
+
++ (LinkedListNode *)findBeginningNodeOfLoopInListWithRunners:(LinkedListNode *)headList {
+    /**
+     - This is a modification of a classic interview problem: detect if a linked list has a loop.
+     - Fast / Slow runners to detect if list has loop or not
+     - fast runner runs 'one' step more than slow runner
+     - They MUST collide at some point, fast runner CAN NOT hop over low runner without collision.
+     */
+    if (!headList || !headList.next) {
+        return nil;
+    }
+    
+    LinkedListNode *slowRunner = headList;
+    LinkedListNode *fastRunner = headList;
+    while (fastRunner && fastRunner.next) {
+        slowRunner = slowRunner.next;
+        fastRunner = fastRunner.next.next;
+        if (slowRunner == fastRunner) {
+            break;
+        }
+    }
+    
+    if (!fastRunner || !fastRunner.next) {
+        return nil;
+    }
+    slowRunner = headList;
+    while (slowRunner != fastRunner) {
+        slowRunner = slowRunner.next;
+        fastRunner = fastRunner.next;
+    }
+    return fastRunner;
 }
 
 /**
  Implement a function to check if a linked list is a palindrome.
  */
 
-- (BOOL)isListAPalindrome:(LinkedListNode *)headNode {
++ (BOOL)isListAPalindrome:(LinkedListNode *)headNode {
+    if (!headNode) {
+        return NO;
+    }
+    if (!headNode.next) {
+        return YES;
+    }
+    LinkedListNode *slowRunner = headNode;
+    LinkedListNode *fastRunner = headNode;
+    
+    NSMutableArray *stack = [NSMutableArray array];
+    
+    while (fastRunner && fastRunner.next) {
+        [stack insertObject:@(slowRunner.data) atIndex:0];
+        slowRunner = slowRunner.next;
+        fastRunner = fastRunner.next.next;
+    }
+    
+    // for odd amount list, skip the middle node
+    if (fastRunner) {
+        slowRunner = slowRunner.next;
+    }
+    
+    NSInteger counter = 0;
+    while (slowRunner) {
+        if (slowRunner.data != [stack[counter] integerValue]) {
+            return NO;
+        }
+        slowRunner = slowRunner.next;
+        counter++;
+    }
+    
     return YES;
+}
+
++ (BOOL)isListAPalindromeRecursively:(LinkedListNode *)headNode {
+    /**
+     when we need "reverse" operation in singly linked list, recersion works
+     */
+    LinkedListNode *next = nil;
+    return [self isPalindromeRecerse:headNode length:headNode.count next:&next];
+}
+
++ (BOOL)isPalindromeRecerse:(LinkedListNode *)headNode length:(NSInteger)length next:(LinkedListNode **)next {
+    if (!headNode || length == 0) {
+        *next = nil;
+        return NO;
+    } else if (length == 1) {
+        *next = headNode.next;
+        return YES;
+    } else if (length == 2) {
+        *next = headNode.next.next;
+        return headNode.data == headNode.next.data;
+    }
+    
+    BOOL isPalindrome = [self isPalindromeRecerse:headNode.next length:length-2 next:next];
+    if (!isPalindrome) {
+        return isPalindrome;
+    }
+    isPalindrome = headNode.data == (*next).data;
+    *next = (*next).next;
+    return isPalindrome;
 }
 
 @end

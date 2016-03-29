@@ -21,5 +21,9 @@
 + (LinkedListNode *)addReverseOrderNumberList:(LinkedListNode *)thisList withNumberList:(LinkedListNode *)thatList;
 + (LinkedListNode *)addReverseOrderNumberList:(LinkedListNode *)thisList withNumberList:(LinkedListNode *)thatList carry:(NSInteger)carry;
 + (LinkedListNode *)addForwardOrderNumberList:(LinkedListNode *)thisList withNumberList:(LinkedListNode *)thatList;
++ (LinkedListNode *)findBeginningNodeOfLoopInList:(LinkedListNode *)headList;
++ (LinkedListNode *)findBeginningNodeOfLoopInListWithRunners:(LinkedListNode *)headList;
++ (BOOL)isListAPalindrome:(LinkedListNode *)headNode;
++ (BOOL)isListAPalindromeRecursively:(LinkedListNode *)headNode;
 
 @end

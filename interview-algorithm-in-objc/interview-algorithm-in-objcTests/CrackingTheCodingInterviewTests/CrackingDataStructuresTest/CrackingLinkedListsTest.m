@@ -198,4 +198,96 @@
     XCTAssertEqualObjects([sumNumberList dataArrayFromList], resultArray);
 }
 
+- (void)testFindBeginningNodeOfLoopInList {
+    NSArray *listArray = nil;
+    LinkedListNode *cycleList = nil;
+    LinkedListNode *cycleNode = nil;
+    
+    listArray = @[@(1), @(2), @(3), @(4), @(5)];
+    cycleList = [self createCycleListWithArray:listArray atIndex:2];
+    cycleNode = [CrackingLinkedLists findBeginningNodeOfLoopInListWithRunners:cycleList];
+    XCTAssertEqual(cycleNode.data, 3);
+    
+    cycleList = [self createCycleListWithArray:listArray atIndex:0];
+    cycleNode = [CrackingLinkedLists findBeginningNodeOfLoopInListWithRunners:cycleList];
+    XCTAssertEqual(cycleNode.data, 1);
+    
+    cycleList = [self createCycleListWithArray:listArray atIndex:4];
+    cycleNode = [CrackingLinkedLists findBeginningNodeOfLoopInListWithRunners:cycleList];
+    XCTAssertEqual(cycleNode.data, 5);
+    
+    listArray = @[@(99)];
+    cycleList = [self createCycleListWithArray:listArray atIndex:0];
+    cycleNode = [CrackingLinkedLists findBeginningNodeOfLoopInListWithRunners:cycleList];
+    XCTAssertEqual(cycleNode.data, 99);
+    
+    cycleList = [LinkedListNode linkedListWithArray:listArray];
+    cycleNode = [CrackingLinkedLists findBeginningNodeOfLoopInListWithRunners:cycleList];
+    XCTAssertNil(cycleNode);
+}
+
+- (void)testPalindromeList {
+    LinkedListNode *list = nil;
+    NSArray *listArray = nil;
+    
+    listArray = @[@(1), @(2), @(3), @(2), @(1)];
+    list = [LinkedListNode linkedListWithArray:listArray];
+    XCTAssertTrue([CrackingLinkedLists isListAPalindromeRecursively:list]);
+    
+    listArray = @[@(1), @(2), @(3), @(2), @(99)];
+    list = [LinkedListNode linkedListWithArray:listArray];
+    XCTAssertFalse([CrackingLinkedLists isListAPalindromeRecursively:list]);
+    
+    listArray = @[@(1), @(2), @(2), @(1)];
+    list = [LinkedListNode linkedListWithArray:listArray];
+    XCTAssertTrue([CrackingLinkedLists isListAPalindromeRecursively:list]);
+    
+    listArray = @[@(1), @(2), @(2), @(3)];
+    list = [LinkedListNode linkedListWithArray:listArray];
+    XCTAssertFalse([CrackingLinkedLists isListAPalindromeRecursively:list]);
+    
+    listArray = @[@(1), @(2), @(2), @(1), @(9)];
+    list = [LinkedListNode linkedListWithArray:listArray];
+    XCTAssertFalse([CrackingLinkedLists isListAPalindromeRecursively:list]);
+    
+    listArray = @[@(1), @(1)];
+    list = [LinkedListNode linkedListWithArray:listArray];
+    XCTAssertTrue([CrackingLinkedLists isListAPalindromeRecursively:list]);
+    
+    listArray = @[@(1), @(9)];
+    list = [LinkedListNode linkedListWithArray:listArray];
+    XCTAssertFalse([CrackingLinkedLists isListAPalindromeRecursively:list]);
+    
+    listArray = @[@(99)];
+    list = [LinkedListNode linkedListWithArray:listArray];
+    XCTAssertTrue([CrackingLinkedLists isListAPalindromeRecursively:list]);
+}
+
+#pragma mark - Private
+
+- (LinkedListNode *)createCycleListWithArray:(NSArray *)array atIndex:(NSInteger)index {
+    if (index < 0 || index >= array.count) {
+        return nil;
+    }
+    LinkedListNode *cycleList = nil;
+    LinkedListNode *cycleNode = nil;
+    LinkedListNode *endNode = nil;
+    for (NSInteger idx=0; idx<array.count; idx++) {
+        if (!cycleList) {
+            cycleList = [LinkedListNode nodeWithData:[array[idx] integerValue]];
+            endNode = cycleList;
+        } else {
+            endNode.next = [LinkedListNode nodeWithData:[array[idx] integerValue]];
+            endNode = endNode.next;
+        }
+        if (idx == index) {
+            cycleNode = endNode;
+        }
+    }
+    if (cycleNode) {
+        endNode.next = cycleNode;
+    }
+    return cycleList;
+}
+
 @end
