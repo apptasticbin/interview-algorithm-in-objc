@@ -22,6 +22,10 @@
 		79689AFD1CA882B10078DCB7 /* LinkedListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79689AFB1CA882B10078DCB7 /* LinkedListNode.m */; };
 		79AF04311CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AF04301CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m */; };
 		79AF04321CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AF04301CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m */; };
+		79B3CB151CAD3E3B00D7DB97 /* StackWithMinimum.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CB141CAD3E3B00D7DB97 /* StackWithMinimum.m */; };
+		79B3CB161CAD3E3B00D7DB97 /* StackWithMinimum.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CB141CAD3E3B00D7DB97 /* StackWithMinimum.m */; };
+		79B3CB1A1CAD441B00D7DB97 /* SetOfStacks.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CB191CAD441B00D7DB97 /* SetOfStacks.m */; };
+		79B3CB1B1CAD441B00D7DB97 /* SetOfStacks.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CB191CAD441B00D7DB97 /* SetOfStacks.m */; };
 		79C5DC201CA2B8FC005DFD1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C5DC1F1CA2B8FC005DFD1B /* main.m */; };
 		79C5DC231CA2B8FC005DFD1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C5DC221CA2B8FC005DFD1B /* AppDelegate.m */; };
 		79C5DC261CA2B8FC005DFD1B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C5DC251CA2B8FC005DFD1B /* ViewController.m */; };
@@ -58,6 +62,10 @@
 		79689AFB1CA882B10078DCB7 /* LinkedListNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinkedListNode.m; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingLinkedLists/LinkedListNode/LinkedListNode.m; sourceTree = "<group>"; };
 		79AF042F1CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixedSizeArrayThreesomeStack.h; sourceTree = "<group>"; };
 		79AF04301CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FixedSizeArrayThreesomeStack.m; sourceTree = "<group>"; };
+		79B3CB131CAD3E3B00D7DB97 /* StackWithMinimum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StackWithMinimum.h; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingStacksAndQueues/StackWithMinimum/StackWithMinimum.h; sourceTree = "<group>"; };
+		79B3CB141CAD3E3B00D7DB97 /* StackWithMinimum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StackWithMinimum.m; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingStacksAndQueues/StackWithMinimum/StackWithMinimum.m; sourceTree = "<group>"; };
+		79B3CB181CAD441B00D7DB97 /* SetOfStacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetOfStacks.h; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingStacksAndQueues/SetOfStacks/SetOfStacks.h; sourceTree = "<group>"; };
+		79B3CB191CAD441B00D7DB97 /* SetOfStacks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetOfStacks.m; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingStacksAndQueues/SetOfStacks/SetOfStacks.m; sourceTree = "<group>"; };
 		79C5DC1B1CA2B8FC005DFD1B /* interview-algorithm-in-objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "interview-algorithm-in-objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C5DC1F1CA2B8FC005DFD1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		79C5DC211CA2B8FC005DFD1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -98,7 +106,9 @@
 				7946C46C1CAB14ED001F0758 /* CrackingStacksAndQueues.m */,
 				79AF042E1CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack */,
 				7946C4721CAB15EE001F0758 /* Queue */,
+				79B3CB171CAD43D700D7DB97 /* SetOfStacks */,
 				7946C4711CAB15E1001F0758 /* Stack */,
+				79B3CB121CAD3E1100D7DB97 /* StackWithMinimum */,
 			);
 			name = CrackingStacksAndQueues;
 			sourceTree = "<group>";
@@ -158,6 +168,24 @@
 			);
 			name = FixedSizeArrayThreesomeStack;
 			path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingStacksAndQueues/FixedSizeArrayThreesomeStack;
+			sourceTree = "<group>";
+		};
+		79B3CB121CAD3E1100D7DB97 /* StackWithMinimum */ = {
+			isa = PBXGroup;
+			children = (
+				79B3CB131CAD3E3B00D7DB97 /* StackWithMinimum.h */,
+				79B3CB141CAD3E3B00D7DB97 /* StackWithMinimum.m */,
+			);
+			name = StackWithMinimum;
+			sourceTree = "<group>";
+		};
+		79B3CB171CAD43D700D7DB97 /* SetOfStacks */ = {
+			isa = PBXGroup;
+			children = (
+				79B3CB181CAD441B00D7DB97 /* SetOfStacks.h */,
+				79B3CB191CAD441B00D7DB97 /* SetOfStacks.m */,
+			);
+			name = SetOfStacks;
 			sourceTree = "<group>";
 		};
 		79C5DC121CA2B8FC005DFD1B = {
@@ -374,7 +402,9 @@
 			files = (
 				7946C4751CAB166D001F0758 /* Stack.m in Sources */,
 				79689AF51CA878AE0078DCB7 /* CrackingLinkedLists.m in Sources */,
+				79B3CB1A1CAD441B00D7DB97 /* SetOfStacks.m in Sources */,
 				79C5DC261CA2B8FC005DFD1B /* ViewController.m in Sources */,
+				79B3CB151CAD3E3B00D7DB97 /* StackWithMinimum.m in Sources */,
 				7946C47A1CAB168C001F0758 /* Queue.m in Sources */,
 				79689AFC1CA882B10078DCB7 /* LinkedListNode.m in Sources */,
 				79AF04311CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m in Sources */,
@@ -392,9 +422,11 @@
 				79AF04321CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m in Sources */,
 				79689AFD1CA882B10078DCB7 /* LinkedListNode.m in Sources */,
 				7946C4761CAB166D001F0758 /* Stack.m in Sources */,
+				79B3CB161CAD3E3B00D7DB97 /* StackWithMinimum.m in Sources */,
 				79689AF81CA878CB0078DCB7 /* CrackingLinkedListsTest.m in Sources */,
 				7946C4701CAB1524001F0758 /* CrackingStacksAndQueuesTest.m in Sources */,
 				79689AF61CA878AE0078DCB7 /* CrackingLinkedLists.m in Sources */,
+				79B3CB1B1CAD441B00D7DB97 /* SetOfStacks.m in Sources */,
 				79C5DC4F1CA2BB55005DFD1B /* CrackingArraysAndStringsTest.m in Sources */,
 				7946C46E1CAB14ED001F0758 /* CrackingStacksAndQueues.m in Sources */,
 				7946C47B1CAB168C001F0758 /* Queue.m in Sources */,

@@ -10,4 +10,6 @@
 
 @interface CrackingStacksAndQueues : NSObject
 
++ (void)towersOfHanoiPuzzleSolver:(NSArray *)stacks;
+
 @end

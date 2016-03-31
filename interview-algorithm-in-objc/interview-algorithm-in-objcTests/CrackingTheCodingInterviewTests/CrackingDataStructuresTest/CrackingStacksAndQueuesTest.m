@@ -7,10 +7,12 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "CrackingStacksAndQueues.h"
 #import "FixedSizeArrayThreesomeStack.h"
 #import "LinkedListNode.h"
 #import "Queue.h"
-#import "Stack.h"
+#import "SetOfStacks.h"
+#import "StackWithMinimum.h"
 
 @interface CrackingStacksAndQueuesTest : XCTestCase
 
@@ -79,6 +81,79 @@
     
     XCTAssertEqual([threesomeStack popDataFromStack:1], 3);
     XCTAssertThrows([threesomeStack popDataFromStack:1]);
+}
+
+- (void)testStackWithMiminum {
+    StackWithMinimum *stack = [StackWithMinimum new];
+    [stack push:3];
+    [stack push:5];
+    [stack push:1];
+    [stack push:2];
+    XCTAssertEqual([stack min], 1);
+    [stack pop];
+    XCTAssertEqual([stack min], 1);
+    [stack pop];
+    XCTAssertEqual([stack min], 3);
+    [stack pop];
+    XCTAssertEqual([stack min], 3);
+    [stack pop];
+    XCTAssertThrows([stack min]);
+}
+
+- (void)testSetOfStacks {
+    SetOfStacks *stack = [[SetOfStacks alloc] initWithThreshold:2];
+    XCTAssertEqual(stack.stackBuffer.count, 0);
+    [stack push:1];
+    XCTAssertEqual(stack.stackBuffer.count, 1);
+    [stack push:2];
+    XCTAssertEqual(stack.stackBuffer.count, 1);
+    [stack push:3];
+    XCTAssertEqual(stack.stackBuffer.count, 2);
+    [stack push:4];
+    XCTAssertEqual(stack.stackBuffer.count, 2);
+    [stack push:5];
+    XCTAssertEqual(stack.stackBuffer.count, 3);
+    
+    XCTAssertEqual([stack pop], 5);
+    XCTAssertEqual(stack.stackBuffer.count, 2);
+    XCTAssertEqual([stack pop], 4);
+    XCTAssertEqual(stack.stackBuffer.count, 2);
+    XCTAssertEqual([stack pop], 3);
+    XCTAssertEqual(stack.stackBuffer.count, 1);
+    XCTAssertEqual([stack pop], 2);
+    XCTAssertEqual(stack.stackBuffer.count, 1);
+    XCTAssertEqual([stack pop], 1);
+    XCTAssertEqual(stack.stackBuffer.count, 0);
+    XCTAssertThrows([stack pop]);
+    
+    [stack push:1];
+    [stack push:2];
+    [stack push:3];
+    [stack push:4];
+    [stack push:5];
+    XCTAssertEqual([stack popAtIndexRecursively:1], 4);
+    XCTAssertEqual(stack.stackBuffer.count, 2);
+    XCTAssertEqual([stack popAtIndexRecursively:0], 2);
+    XCTAssertEqual(stack.stackBuffer.count, 2);
+    XCTAssertEqual([stack popAtIndexRecursively:1], 5);
+    XCTAssertEqual(stack.stackBuffer.count, 1);
+}
+
+- (void)testTowersOfHanoiPuzzleSolver {
+    Stack *leftTower = [Stack new];
+    Stack *midTower = [Stack new];
+    Stack *rightTower = [Stack new];
+    [leftTower push:5];
+    [leftTower push:4];
+    [leftTower push:3];
+    [leftTower push:2];
+    [leftTower push:1];
+    
+    [CrackingStacksAndQueues towersOfHanoiPuzzleSolver:@[leftTower, midTower, rightTower]];
+    
+    XCTAssertTrue([leftTower isEmpty]);
+    XCTAssertTrue([midTower isEmpty]);
+    XCTAssertFalse([rightTower isEmpty]);
 }
 
 @end
