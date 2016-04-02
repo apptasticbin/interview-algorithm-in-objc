@@ -7,31 +7,37 @@
 //
 
 #import "Queue.h"
-#import "LinkedListNode.h"
+#import "LinkedObjectListNode.h"
 
 @implementation Queue
 
-- (void)enqueue:(NSInteger)data {
-    LinkedListNode *newNode = [LinkedListNode nodeWithData:data];;
+- (void)enqueue:(id)data {
+    LinkedObjectListNode *newNode = [LinkedObjectListNode nodeWithData:data];;
     if (!self.first) {
         self.first = self.last = newNode;
     } else {
         self.last.next = newNode;
         self.last = self.last.next;
     }
+    self.count++;
 }
 
-- (NSInteger)dequeue {
+- (id)dequeue {
     if (!self.first) {
-        @throw [NSException exceptionWithName:@"EmptyQueueException" reason:@"Queue is empty" userInfo:nil];
+        return nil;
     }
-    LinkedListNode *node = self.first;
+    LinkedObjectListNode *node = self.first;
     // release last node when dequeuing last one in queue.
     if (self.first == self.last) {
         self.last = self.last.next;
     }
     self.first = self.first.next;
+    self.count--;
     return node.data;
+}
+
+- (BOOL)isEmpty {
+    return !self.count;
 }
 
 @end

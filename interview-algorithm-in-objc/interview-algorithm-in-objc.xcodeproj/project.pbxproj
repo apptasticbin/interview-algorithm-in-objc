@@ -26,6 +26,14 @@
 		79B3CB161CAD3E3B00D7DB97 /* StackWithMinimum.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CB141CAD3E3B00D7DB97 /* StackWithMinimum.m */; };
 		79B3CB1A1CAD441B00D7DB97 /* SetOfStacks.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CB191CAD441B00D7DB97 /* SetOfStacks.m */; };
 		79B3CB1B1CAD441B00D7DB97 /* SetOfStacks.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CB191CAD441B00D7DB97 /* SetOfStacks.m */; };
+		79B3CB1F1CADD2EE00D7DB97 /* MyQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CB1E1CADD2EE00D7DB97 /* MyQueue.m */; };
+		79B3CB201CADD2EE00D7DB97 /* MyQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CB1E1CADD2EE00D7DB97 /* MyQueue.m */; };
+		79B3CB241CAE94FC00D7DB97 /* AnimalShelter.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CB231CAE94FC00D7DB97 /* AnimalShelter.m */; };
+		79B3CB251CAE94FC00D7DB97 /* AnimalShelter.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CB231CAE94FC00D7DB97 /* AnimalShelter.m */; };
+		79B3CB281CAE952300D7DB97 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CB271CAE952300D7DB97 /* Animal.m */; };
+		79B3CB291CAE952300D7DB97 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CB271CAE952300D7DB97 /* Animal.m */; };
+		79B3CB2D1CAE9C4300D7DB97 /* LinkedObjectListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CB2C1CAE9C4300D7DB97 /* LinkedObjectListNode.m */; };
+		79B3CB2E1CAE9C4300D7DB97 /* LinkedObjectListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CB2C1CAE9C4300D7DB97 /* LinkedObjectListNode.m */; };
 		79C5DC201CA2B8FC005DFD1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C5DC1F1CA2B8FC005DFD1B /* main.m */; };
 		79C5DC231CA2B8FC005DFD1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C5DC221CA2B8FC005DFD1B /* AppDelegate.m */; };
 		79C5DC261CA2B8FC005DFD1B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C5DC251CA2B8FC005DFD1B /* ViewController.m */; };
@@ -66,6 +74,14 @@
 		79B3CB141CAD3E3B00D7DB97 /* StackWithMinimum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StackWithMinimum.m; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingStacksAndQueues/StackWithMinimum/StackWithMinimum.m; sourceTree = "<group>"; };
 		79B3CB181CAD441B00D7DB97 /* SetOfStacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetOfStacks.h; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingStacksAndQueues/SetOfStacks/SetOfStacks.h; sourceTree = "<group>"; };
 		79B3CB191CAD441B00D7DB97 /* SetOfStacks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetOfStacks.m; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingStacksAndQueues/SetOfStacks/SetOfStacks.m; sourceTree = "<group>"; };
+		79B3CB1D1CADD2EE00D7DB97 /* MyQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyQueue.h; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingStacksAndQueues/MyQueue/MyQueue.h; sourceTree = "<group>"; };
+		79B3CB1E1CADD2EE00D7DB97 /* MyQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyQueue.m; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingStacksAndQueues/MyQueue/MyQueue.m; sourceTree = "<group>"; };
+		79B3CB221CAE94FC00D7DB97 /* AnimalShelter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimalShelter.h; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingStacksAndQueues/AnimalShelter/AnimalShelter.h; sourceTree = "<group>"; };
+		79B3CB231CAE94FC00D7DB97 /* AnimalShelter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimalShelter.m; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingStacksAndQueues/AnimalShelter/AnimalShelter.m; sourceTree = "<group>"; };
+		79B3CB261CAE952300D7DB97 /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Animal.h; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingStacksAndQueues/AnimalShelter/Animal.h; sourceTree = "<group>"; };
+		79B3CB271CAE952300D7DB97 /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Animal.m; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingStacksAndQueues/AnimalShelter/Animal.m; sourceTree = "<group>"; };
+		79B3CB2B1CAE9C4300D7DB97 /* LinkedObjectListNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinkedObjectListNode.h; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingLinkedLists/LinkedObjectListNode/LinkedObjectListNode.h; sourceTree = "<group>"; };
+		79B3CB2C1CAE9C4300D7DB97 /* LinkedObjectListNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinkedObjectListNode.m; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingLinkedLists/LinkedObjectListNode/LinkedObjectListNode.m; sourceTree = "<group>"; };
 		79C5DC1B1CA2B8FC005DFD1B /* interview-algorithm-in-objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "interview-algorithm-in-objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C5DC1F1CA2B8FC005DFD1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		79C5DC211CA2B8FC005DFD1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -104,7 +120,9 @@
 			children = (
 				7946C46B1CAB14ED001F0758 /* CrackingStacksAndQueues.h */,
 				7946C46C1CAB14ED001F0758 /* CrackingStacksAndQueues.m */,
+				79B3CB211CAE94C200D7DB97 /* AnimalShelter */,
 				79AF042E1CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack */,
+				79B3CB1C1CADD2C500D7DB97 /* MyQueue */,
 				7946C4721CAB15EE001F0758 /* Queue */,
 				79B3CB171CAD43D700D7DB97 /* SetOfStacks */,
 				7946C4711CAB15E1001F0758 /* Stack */,
@@ -147,6 +165,7 @@
 				79689AF31CA878AE0078DCB7 /* CrackingLinkedLists.h */,
 				79689AF41CA878AE0078DCB7 /* CrackingLinkedLists.m */,
 				79689AF91CA8828B0078DCB7 /* LInkedListNode */,
+				79B3CB2A1CAE9C0F00D7DB97 /* LinkedObjectListNode */,
 			);
 			name = CrackingLinkedLists;
 			sourceTree = "<group>";
@@ -186,6 +205,35 @@
 				79B3CB191CAD441B00D7DB97 /* SetOfStacks.m */,
 			);
 			name = SetOfStacks;
+			sourceTree = "<group>";
+		};
+		79B3CB1C1CADD2C500D7DB97 /* MyQueue */ = {
+			isa = PBXGroup;
+			children = (
+				79B3CB1D1CADD2EE00D7DB97 /* MyQueue.h */,
+				79B3CB1E1CADD2EE00D7DB97 /* MyQueue.m */,
+			);
+			name = MyQueue;
+			sourceTree = "<group>";
+		};
+		79B3CB211CAE94C200D7DB97 /* AnimalShelter */ = {
+			isa = PBXGroup;
+			children = (
+				79B3CB221CAE94FC00D7DB97 /* AnimalShelter.h */,
+				79B3CB231CAE94FC00D7DB97 /* AnimalShelter.m */,
+				79B3CB261CAE952300D7DB97 /* Animal.h */,
+				79B3CB271CAE952300D7DB97 /* Animal.m */,
+			);
+			name = AnimalShelter;
+			sourceTree = "<group>";
+		};
+		79B3CB2A1CAE9C0F00D7DB97 /* LinkedObjectListNode */ = {
+			isa = PBXGroup;
+			children = (
+				79B3CB2B1CAE9C4300D7DB97 /* LinkedObjectListNode.h */,
+				79B3CB2C1CAE9C4300D7DB97 /* LinkedObjectListNode.m */,
+			);
+			name = LinkedObjectListNode;
 			sourceTree = "<group>";
 		};
 		79C5DC121CA2B8FC005DFD1B = {
@@ -401,6 +449,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7946C4751CAB166D001F0758 /* Stack.m in Sources */,
+				79B3CB2D1CAE9C4300D7DB97 /* LinkedObjectListNode.m in Sources */,
+				79B3CB241CAE94FC00D7DB97 /* AnimalShelter.m in Sources */,
+				79B3CB1F1CADD2EE00D7DB97 /* MyQueue.m in Sources */,
 				79689AF51CA878AE0078DCB7 /* CrackingLinkedLists.m in Sources */,
 				79B3CB1A1CAD441B00D7DB97 /* SetOfStacks.m in Sources */,
 				79C5DC261CA2B8FC005DFD1B /* ViewController.m in Sources */,
@@ -410,6 +461,7 @@
 				79AF04311CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m in Sources */,
 				79C5DC231CA2B8FC005DFD1B /* AppDelegate.m in Sources */,
 				79689AF11CA877D00078DCB7 /* CrackingArraysAndStrings.m in Sources */,
+				79B3CB281CAE952300D7DB97 /* Animal.m in Sources */,
 				7946C46D1CAB14ED001F0758 /* CrackingStacksAndQueues.m in Sources */,
 				79C5DC201CA2B8FC005DFD1B /* main.m in Sources */,
 			);
@@ -419,15 +471,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79B3CB251CAE94FC00D7DB97 /* AnimalShelter.m in Sources */,
 				79AF04321CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m in Sources */,
 				79689AFD1CA882B10078DCB7 /* LinkedListNode.m in Sources */,
 				7946C4761CAB166D001F0758 /* Stack.m in Sources */,
+				79B3CB201CADD2EE00D7DB97 /* MyQueue.m in Sources */,
+				79B3CB2E1CAE9C4300D7DB97 /* LinkedObjectListNode.m in Sources */,
 				79B3CB161CAD3E3B00D7DB97 /* StackWithMinimum.m in Sources */,
 				79689AF81CA878CB0078DCB7 /* CrackingLinkedListsTest.m in Sources */,
 				7946C4701CAB1524001F0758 /* CrackingStacksAndQueuesTest.m in Sources */,
 				79689AF61CA878AE0078DCB7 /* CrackingLinkedLists.m in Sources */,
 				79B3CB1B1CAD441B00D7DB97 /* SetOfStacks.m in Sources */,
 				79C5DC4F1CA2BB55005DFD1B /* CrackingArraysAndStringsTest.m in Sources */,
+				79B3CB291CAE952300D7DB97 /* Animal.m in Sources */,
 				7946C46E1CAB14ED001F0758 /* CrackingStacksAndQueues.m in Sources */,
 				7946C47B1CAB168C001F0758 /* Queue.m in Sources */,
 			);

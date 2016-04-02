@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class Stack;
+
 @interface CrackingStacksAndQueues : NSObject
 
 + (void)towersOfHanoiPuzzleSolver:(NSArray *)stacks;
-
++ (void)sortStackInAscendingOrder:(Stack *)stack;
++ (Stack *)betterSortStackInAscendingOrder:(Stack *)stack;
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "CrackingStacksAndQueues.h"
+#import "LinkedListNode.h"
 #import "Stack.h"
 
 @implementation CrackingStacksAndQueues
@@ -117,7 +118,11 @@
  */
 
 - (void)myQueue {
-    
+    /**
+     - check MyQueue implementation
+     - one stack for dequeuing, another one for enqueuing
+     - shift all enqueued items into dequeue stack ONLY when dequeue stack is empty.
+     */
 }
 
 /**
@@ -127,13 +132,53 @@
  following operations: push, pop, peek, and isEmpty.
  */
 
++ (void)sortStackInAscendingOrder:(Stack *)stack {
+    Stack *buffer = [Stack new];
+    NSLog(@"\nStack: %@\nBuffer: %@", stack.top, buffer.top);
+    while (![stack isEmpty]) {
+        if ([buffer isEmpty]) {
+            [buffer push:[stack pop]];
+            continue;
+        }
+        if ([stack peek] <= [buffer peek]) {
+            [buffer push:[stack pop]];
+        } else {
+            NSInteger tmp = [stack pop];
+            while (![buffer isEmpty]) {
+                [stack push:[buffer pop]];
+            }
+            [stack push:tmp];
+        }
+        NSLog(@"\nStack: %@\nBuffer: %@", stack.top, buffer.top);
+    }
+    while (![buffer isEmpty]) {
+        [stack push:[buffer pop]];
+    }
+}
+
++ (Stack *)betterSortStackInAscendingOrder:(Stack *)stack {
+    Stack *buffer = [Stack new];
+    while (![stack isEmpty]) {
+        NSInteger tmp = [stack pop];
+        while (![buffer isEmpty] && [buffer peek] > tmp) {
+            [stack push:[buffer pop]];
+        }
+        [buffer push:tmp];
+    }
+    return buffer;
+}
+
 /**
  An animal shelter holds only dogs and cats, and operates on a strictly "first in, first out" basis. 
  People must adopt either the "oldest" (based on arrival time) of all animals at the shelter, or they
  can select whether they would prefer a dog or a cat (and will receive the oldest animal of that type).
- They cannot select which specificanimal they would like. Create the data structures to maintain this 
- system and implement operations such as enqueue, dequeueAny, dequeueDog and dequeueCat.You mayusethe 
+ They cannot select which specific animal they would like. Create the data structures to maintain this
+ system and implement operations such as enqueue, dequeueAny, dequeueDog and dequeueCat.You may use the 
  built-in LinkedList data structure.
  */
+
+- (void)AnimalShelter {
+    
+}
 
 @end

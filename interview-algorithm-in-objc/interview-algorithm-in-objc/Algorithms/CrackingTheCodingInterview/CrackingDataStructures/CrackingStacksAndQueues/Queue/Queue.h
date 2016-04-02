@@ -8,14 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@class LinkedListNode;
+@class LinkedObjectListNode;
 
 @interface Queue : NSObject
 
-@property (nonatomic, strong) LinkedListNode *first;
-@property (nonatomic, strong) LinkedListNode *last;
+@property(nonatomic, strong) LinkedObjectListNode *first;
+@property(nonatomic, strong) LinkedObjectListNode *last;
+@property(nonatomic, assign) NSInteger count;
 
-- (void)enqueue:(NSInteger)data;
-- (NSInteger)dequeue;
+- (void)enqueue:(id)data;
+- (id)dequeue;
+- (BOOL)isEmpty;
 
 @end

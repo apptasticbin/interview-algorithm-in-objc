@@ -7,9 +7,13 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "Animal.h"
+#import "AnimalShelter.h"
 #import "CrackingStacksAndQueues.h"
 #import "FixedSizeArrayThreesomeStack.h"
 #import "LinkedListNode.h"
+#import "LinkedObjectListNode.h"
+#import "MyQueue.h"
 #import "Queue.h"
 #import "SetOfStacks.h"
 #import "StackWithMinimum.h"
@@ -42,20 +46,20 @@
 
 - (void)testQueue {
     Queue *queue = [Queue new];
-    [queue enqueue:1];
-    [queue enqueue:2];
-    [queue enqueue:3];
+    [queue enqueue:@(1)];
+    [queue enqueue:@(2)];
+    [queue enqueue:@(3)];
     XCTAssertNotEqual(queue.first, queue.last);
-    XCTAssertEqual(queue.first.data, 1);
-    XCTAssertEqual(queue.last.data, 3);
+    XCTAssertEqual(queue.first.data, @(1));
+    XCTAssertEqual(queue.last.data, @(3));
     
-    XCTAssertEqual([queue dequeue], 1);
-    XCTAssertEqual([queue dequeue], 2);
+    XCTAssertEqual([queue dequeue], @(1));
+    XCTAssertEqual([queue dequeue], @(2));
     XCTAssertEqual(queue.first, queue.last);
-    XCTAssertEqual([queue dequeue], 3);
+    XCTAssertEqual([queue dequeue], @(3));
     XCTAssertNil(queue.first);
     XCTAssertNil(queue.last);
-    XCTAssertThrowsSpecificNamed([queue dequeue], NSException, @"EmptyQueueException");
+    XCTAssertNil([queue dequeue]);
 }
 
 - (void)testFixedSizeArrayThreesomeStack {
@@ -154,6 +158,84 @@
     XCTAssertTrue([leftTower isEmpty]);
     XCTAssertTrue([midTower isEmpty]);
     XCTAssertFalse([rightTower isEmpty]);
+    
+    NSArray *resultArray = @[@(1), @(2), @(3), @(4), @(5)];
+    XCTAssertEqualObjects([rightTower.top dataArrayFromList], resultArray);
+}
+
+- (void)testMyQueue {
+    MyQueue *queue = [MyQueue new];
+    [queue enqueue:1];
+    [queue enqueue:2];
+    [queue enqueue:3];
+    [queue enqueue:4];
+    XCTAssertTrue([queue.dequeueStack isEmpty]);
+    XCTAssertEqual(queue.enqueueStack.count, 4);
+    XCTAssertEqual([queue.enqueueStack peek], 4);
+    
+    XCTAssertEqual([queue dequeue], 1);
+    XCTAssertFalse([queue.dequeueStack isEmpty]);
+    XCTAssertTrue([queue.enqueueStack isEmpty]);
+    XCTAssertEqual(queue.dequeueStack.count, 3);
+    XCTAssertEqual([queue dequeue], 2);
+    XCTAssertEqual([queue dequeue], 3);
+    XCTAssertEqual([queue dequeue], 4);
+    
+    XCTAssertThrows([queue dequeue]);
+}
+
+- (void)testSortStackInAscendingOrder {
+    Stack *shuffleStack = [Stack new];
+    [shuffleStack push:4];
+    [shuffleStack push:2];
+    [shuffleStack push:3];
+    [shuffleStack push:1];
+    [shuffleStack push:5];
+    [CrackingStacksAndQueues sortStackInAscendingOrder:shuffleStack];
+    NSArray *resultData = @[@(5), @(4), @(3), @(2), @(1)];
+    XCTAssertEqualObjects([shuffleStack.top dataArrayFromList], resultData);
+    
+    shuffleStack = [Stack new];
+    [shuffleStack push:4];
+    [shuffleStack push:1];
+    [shuffleStack push:3];
+    [shuffleStack push:2];
+    [shuffleStack push:5];
+    XCTAssertEqualObjects([[[CrackingStacksAndQueues betterSortStackInAscendingOrder:shuffleStack] top] dataArrayFromList], resultData);
+}
+
+- (void)testAnimalShelter {
+    AnimalShelter *animalShelter = [AnimalShelter new];
+    Animal *animal = nil;
+    [animalShelter enqueue:[Animal newCat]];
+    [animalShelter enqueue:[Animal newDog]];
+    [animalShelter enqueue:[Animal newCat]];
+    [animalShelter enqueue:[Animal newCat]];
+    [animalShelter enqueue:[Animal newDog]];
+    [animalShelter enqueue:[Animal newCat]];
+    [animalShelter enqueue:[Animal newDog]];
+    XCTAssertEqual(animalShelter.catShelter.count, 4);
+    XCTAssertEqual(animalShelter.dogShelter.count, 3);
+    
+    animal = [animalShelter dequeueAny];
+    XCTAssertEqual(animal.order, 0);
+    XCTAssertEqual(animal.type, Cat);
+    
+    animal = [animalShelter dequeueAny];
+    XCTAssertEqual(animal.order, 1);
+    XCTAssertEqual(animal.type, Dog);
+    
+    animal = [animalShelter dequeueDog];
+    XCTAssertEqual(animal.order, 4);
+    XCTAssertEqual(animal.type, Dog);
+    
+    animal = [animalShelter dequeueAny];
+    XCTAssertEqual(animal.order, 2);
+    XCTAssertEqual(animal.type, Cat);
+    
+    animal = [animalShelter dequeueCat];
+    XCTAssertEqual(animal.order, 3);
+    XCTAssertEqual(animal.type, Cat);
 }
 
 @end
