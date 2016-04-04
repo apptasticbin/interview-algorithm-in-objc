@@ -16,6 +16,7 @@
 @property(nonatomic, strong) LinkedObjectListNode *last;
 @property(nonatomic, assign) NSInteger count;
 
++ (Queue *)queueFromArray:(NSArray *)array;
 - (void)enqueue:(id)data;
 - (id)dequeue;
 - (BOOL)isEmpty;

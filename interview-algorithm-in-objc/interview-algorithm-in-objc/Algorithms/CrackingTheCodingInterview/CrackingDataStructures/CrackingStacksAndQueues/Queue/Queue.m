@@ -11,6 +11,14 @@
 
 @implementation Queue
 
++ (Queue *)queueFromArray:(NSArray *)array {
+    Queue *queue = [Queue new];
+    for (NSInteger i=0; i<array.count; i++) {
+        [queue enqueue:array[i]];
+    }
+    return queue;
+}
+
 - (void)enqueue:(id)data {
     LinkedObjectListNode *newNode = [LinkedObjectListNode nodeWithData:data];;
     if (!self.first) {
