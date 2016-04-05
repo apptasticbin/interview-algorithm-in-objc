@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class BinaryTreeNode;
+
 @interface CrackingTreesAndGraphs : NSObject
+
++ (BOOL)isBinaryTreeBalanced:(BinaryTreeNode *)binaryTree;
++ (BOOL)betterIsBinaryTreeBalanced:(BinaryTreeNode *)binaryTree;
 
 @end

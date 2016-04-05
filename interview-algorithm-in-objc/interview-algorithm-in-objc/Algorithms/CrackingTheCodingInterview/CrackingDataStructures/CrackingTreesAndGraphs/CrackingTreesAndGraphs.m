@@ -7,6 +7,7 @@
 //
 
 #import "CrackingTreesAndGraphs.h"
+#import "BinaryTreeNode.h"
 
 /**
  - Graph: https://en.wikipedia.org/wiki/Graph_(abstract_data_type)
@@ -55,8 +56,50 @@
  never differ by more than one.
  */
 
-+ (BOOL)isBinaryTreeBalanced:(id)binaryTree {
-    return YES;
+/**
+ - it's not very efficient.
+ - On each node, we recurse through its entire subtree.
+ This means that getHeight is called repeatedly on the same nodes.
+ The algorithm is therefore O(N*N)
+*/
++ (BOOL)isBinaryTreeBalanced:(BinaryTreeNode *)binaryTree {
+    if (!binaryTree) {
+        return YES;
+    }
+    NSInteger heightDiff =
+    [BinaryTreeNode heightOfTree:binaryTree.leftChild] - [BinaryTreeNode heightOfTree:binaryTree.rightChild];
+    if (ABS(heightDiff) > 1) {
+        return NO;
+    }
+    return [self isBinaryTreeBalanced:binaryTree.leftChild] &&
+    [self isBinaryTreeBalanced:binaryTree.rightChild];
+}
+
+/**
+ 0(N) time and 0(H) space, where H is the height of the tree
+ */
+
++ (BOOL)betterIsBinaryTreeBalanced:(BinaryTreeNode *)binaryTree {
+    return [self checkHeight:binaryTree] != -1;
+}
+
++ (NSInteger)checkHeight:(BinaryTreeNode *)root {
+    if (!root) {
+        return 0;
+    }
+    NSInteger leftHeight = [self checkHeight:root.leftChild];
+    if (leftHeight == -1) {
+        return -1;
+    }
+    NSInteger rightHeight = [self checkHeight:root.rightChild];
+    if (rightHeight == -1) {
+        return -1;
+    }
+    NSInteger heightDiff = leftHeight - rightHeight;
+    if (ABS(heightDiff) > 1) {
+        return -1;
+    }
+    return MAX(leftHeight, rightHeight) + 1;
 }
 
 /**

@@ -31,5 +31,6 @@ typedef void(^BinaryTreeSearchAction)(BinaryTreeNode *node);
 
 + (void)depthFirstSearch:(BinaryTreeNode *)root action:(BinaryTreeSearchAction)action order:(DepthFirstSearchOrder)order;
 + (void)breadthFirstSearch:(BinaryTreeNode *)root action:(BinaryTreeSearchAction)action;
++ (NSInteger)heightOfTree:(BinaryTreeNode *)root;
 
 @end

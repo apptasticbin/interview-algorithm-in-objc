@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "BinaryTreeNode.h"
+#import "CrackingTreesAndGraphs.h"
 #import "Queue.h"
 
 @interface CrackingTreesAndGraphsTest : XCTestCase
@@ -64,6 +65,32 @@
         [actualArray addObject:node.data];
     } order:DepthFirstSearchPostOrder];
     XCTAssertEqualObjects(actualArray, expectArray);
+}
+
+- (void)testIsBalancedBinaryTree {
+    NSArray *testArray = @[@(1), @(2), @(3),@(4), @(5), @(6)];
+    BinaryTreeNode *binaryTree = [self binaryTreeFromArray:testArray];
+    XCTAssertTrue([CrackingTreesAndGraphs isBinaryTreeBalanced:binaryTree]);
+    XCTAssertTrue([CrackingTreesAndGraphs betterIsBinaryTreeBalanced:binaryTree]);
+    
+    [BinaryTreeNode depthFirstSearch:binaryTree action:^(BinaryTreeNode *node) {
+        NSInteger data = [node.data integerValue];
+        if (data == 5) {
+            BinaryTreeNode *number7 = [BinaryTreeNode treeNodeWithData:@(7) parent:node];
+            BinaryTreeNode *number8 = [BinaryTreeNode treeNodeWithData:@(8) parent:number7];
+            number7.leftChild = number8;
+            node.rightChild = number7;
+        }
+    } order:DepthFirstSearchPreOrder];
+    
+    NSArray *expectArray = @[@(1), @(2), @(3),@(4), @(5), @(6), @(7), @(8)];
+    NSMutableArray *actualArray = [NSMutableArray array];
+    [BinaryTreeNode breadthFirstSearch:binaryTree action:^(BinaryTreeNode *node) {
+        [actualArray addObject:node.data];
+    }];
+    XCTAssertEqualObjects(actualArray, expectArray);
+    XCTAssertFalse([CrackingTreesAndGraphs isBinaryTreeBalanced:binaryTree]);
+    XCTAssertFalse([CrackingTreesAndGraphs betterIsBinaryTreeBalanced:binaryTree]);
 }
 
 #pragma mark - Private

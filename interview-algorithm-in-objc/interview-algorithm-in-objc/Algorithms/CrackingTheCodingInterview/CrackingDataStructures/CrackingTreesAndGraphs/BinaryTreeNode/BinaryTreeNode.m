@@ -52,6 +52,13 @@
     }
 }
 
++ (NSInteger)heightOfTree:(BinaryTreeNode *)root {
+    if (!root) {
+        return 0;
+    }
+    return MAX([self heightOfTree:root.leftChild], [self heightOfTree:root.rightChild]) + 1;
+}
+
 #pragma mark - Private
 
 - (instancetype)initWithData:(id)data parent:(BinaryTreeNode *)parent
