@@ -8,6 +8,8 @@
 
 #import "CrackingTreesAndGraphs.h"
 #import "BinaryTreeNode.h"
+#import "GraphNode.h"
+#import "LinkedObjectListNode.h"
 
 /**
  - Graph: https://en.wikipedia.org/wiki/Graph_(abstract_data_type)
@@ -107,40 +109,375 @@
  */
 
 /**
+ - A directed graph is called a simple digraph if it has no multiple arrows (two or more edges that 
+ connect the same two vertices in the same direction) and no loops (edges that connect vertices to themselves).
+ - A directed graph is called a directed multigraph or multidigraph if it may have multiple arrows (and sometimes loops).
+ */
+
++ (BOOL)hasRouteBetweenGraphNode:(GraphNode *)thisNode andNode:(GraphNode *)thatNode {
+    __block BOOL hasRoute = NO;
+    [GraphNode breadthFirstTraverse:thisNode withAction:^(GraphNode *node) {
+        /**
+         - TODO: add '*stop' flag to jump out of traverse
+         - depthFirstTraverse also works.
+         - depth first search is a bit simpler to implement since it can be done with simple recursion. 
+         Breadth first search can also be useful to find the shortest path, whereas depth first search 
+         may traverse one adjacent node very deeply before ever going onto the immediate neigh- bors
+         */
+        if (node == thatNode) {
+            hasRoute = YES;
+        }
+    }];
+    return hasRoute;
+}
+
+/**
  Given a sorted (increasing order) array with unique integer elements, write an algorithm
  to create a binary search tree with minimal height.
  */
+
+/**
+ - binary search uses the same way to decide 'middle' index
+ */
+
++ (BinaryTreeNode *)binarySearchTreeWithMinimalHeightFrom:(NSArray *)array {
+    return [self binarySearchTreeWithArray:array startIndex:0 endIndex:array.count - 1];
+}
+
++ (BinaryTreeNode *)binarySearchTreeWithArray:(NSArray *)array startIndex:(NSInteger)startIndex endIndex:(NSInteger)endIndex {
+    if (startIndex > endIndex) {
+        return nil;
+    }
+    NSInteger midIndex = (startIndex + endIndex) / 2;
+    BinaryTreeNode *node = [BinaryTreeNode treeNodeWithData:array[midIndex] parent:nil];
+    node.leftChild = [self binarySearchTreeWithArray:array startIndex:startIndex endIndex:midIndex-1];
+    node.rightChild = [self binarySearchTreeWithArray:array startIndex:midIndex+1 endIndex:endIndex];
+    return node;
+}
 
 /**
  Given a binary tree, design an algorithm which creates a linked list of all the nodes at 
  each depth (e.g., if you have a tree with depth D, you'll have D linked lists).
  */
 
++ (NSArray *)arrayOfLinkedListForEachDepth:(BinaryTreeNode *)tree {
+    /**
+     - TODO: it is better to have a modified breadth search traversal method
+     */
+    __block NSMutableArray *linkedListArray = [NSMutableArray array];
+    __block NSInteger depth = 0;
+    __block NSInteger counter = 0;
+    __block LinkedObjectListNode *list = nil;
+    [BinaryTreeNode breadthFirstSearch:tree action:^(BinaryTreeNode *node) {
+        if (counter < pow(2, depth)) {
+            if (!list) {
+                list = [LinkedObjectListNode nodeWithData:node.data];
+            } else {
+                [list appendNodeToEnd:node.data];
+            }
+            counter++;
+        } else {
+            [linkedListArray addObject:list];
+            depth++;
+            counter = 1;
+            list = [LinkedObjectListNode nodeWithData:node.data];
+        }
+    }];
+    [linkedListArray addObject:list];
+    return linkedListArray;
+}
+
++ (NSArray *)arrayOfLinkedListForEachDepthByDFS:(BinaryTreeNode *)tree {
+    NSMutableArray *linkedListArray = [NSMutableArray array];
+    [self arrayOfLinkedListOfTree:tree linkedListArray:linkedListArray level:0];
+    return linkedListArray;
+}
+
++ (void)arrayOfLinkedListOfTree:(BinaryTreeNode *)root linkedListArray:(NSMutableArray *)array level:(NSInteger)level {
+    if (!root) {
+        return;
+    }
+    LinkedObjectListNode *levelList = nil;
+    if (array.count == level) {
+        levelList = [LinkedObjectListNode nodeWithData:root.data];
+        [array addObject:levelList];
+    } else {
+        levelList = array[level];
+        [levelList appendNodeToEnd:root.data];
+    }
+    [self arrayOfLinkedListOfTree:root.leftChild linkedListArray:array level:level + 1];
+    [self arrayOfLinkedListOfTree:root.rightChild linkedListArray:array level:level + 1];
+}
+
 /**
  Implement a function to check if a binary tree is a binary search tree.
  */
+
++ (BOOL)isBinaryTreeBinarySearchTree:(BinaryTreeNode *)root {
+    /**
+     - Following tree is NOT NOT NOT binary search tree,
+     because 20 is smaller than 25, which is on 20's left subtree
+            20
+          /    \
+        10      30
+          \
+            25
+     - More precisely, the condition of binary search tree is that: 
+     ALL left nodes must be less than or equal to the current node, 
+     which must be less than all the right nodes.
+     */
+    return [self isBinaryTreeBinarySearchTree:root minValue:LONG_MIN maxValue:LONG_MAX];
+}
+
++ (BOOL)isBinaryTreeBinarySearchTree:(BinaryTreeNode *)root minValue:(NSInteger)min maxValue:(NSInteger)max {
+    if (!root) {
+        return YES;
+    }
+    NSInteger data = [root.data integerValue];
+    if (data <= min || data > max) {
+        return NO;
+    }
+    return [self isBinaryTreeBinarySearchTree:root.leftChild minValue:min maxValue:[root.data integerValue]] &&
+    [self isBinaryTreeBinarySearchTree:root.rightChild minValue:[root.data integerValue] maxValue:max];
+}
+
++ (BOOL)isBinaryTreeBinarySearchTreeByInOrderTraversal:(BinaryTreeNode *)root {
+    /**
+     - using In-Order depth traversal, in order to make use of it's special traversal order
+     - keep the last visited node in external static variable
+     */
+    BinaryTreeNode *lastVisitedNode = nil;
+    return [self isBinaryTreeBinarySearchTreeByInOrderTraversal:root lastVisitedNode:&lastVisitedNode];
+}
+
++ (BOOL)isBinaryTreeBinarySearchTreeByInOrderTraversal:(BinaryTreeNode *)root lastVisitedNode:(BinaryTreeNode **)lastVisitedNode {
+    if (!root) {
+        return YES;
+    }
+    if (![self isBinaryTreeBinarySearchTreeByInOrderTraversal:root.leftChild lastVisitedNode:lastVisitedNode]) {
+        return NO;
+    }
+    if (*lastVisitedNode && [root.data integerValue] < [(*lastVisitedNode).data integerValue]) {
+        return NO;
+    }
+    *lastVisitedNode = root;
+    if (![self isBinaryTreeBinarySearchTreeByInOrderTraversal:root.rightChild lastVisitedNode:lastVisitedNode]) {
+        return NO;
+    }
+    return YES;
+}
 
 /**
  Write an algorithm to find the 'next' node (i.e., in-order successor) of a given node in a binary
  search tree. You may assume that each node has a link to its parent.
  */
 
++ (BinaryTreeNode *)nextInOrderNodeOfNodeInBinarySearchTree:(BinaryTreeNode *)node {
+    /**
+     - This is not the most algorithmically complex problem in the world, but it can be tricky to code perfectly. 
+     - In a problem like this, it's useful to sketch out pseudocode to carefully outline the different cases.
+     */
+    if (!node) {
+        nil;
+    }
+    if (node.rightChild) {
+        return [self leftMostNodeOfNode:node.rightChild];
+    }
+    while (node.parent && node.parent.leftChild != node) {
+        node = node.parent;
+    }
+    return node.parent;
+}
+
++ (BinaryTreeNode *)leftMostNodeOfNode:(BinaryTreeNode *)node {
+    if (!node) {
+        return nil;
+    }
+    while (node.leftChild) {
+        node = node.leftChild;
+    }
+    return node;
+}
+
 /**
  Design an algorithm and write code to find the first common ancestor of two nodes in a binary tree. 
  Avoid storing additional nodes in a data structure. NOTE: This is not necessarily a binary search tree.
  */
 
++ (BinaryTreeNode *)firstCommonAncestorOfNode:(BinaryTreeNode *)thisNode andNode:(BinaryTreeNode *)thatNode
+                                       inTree:(BinaryTreeNode *)treeRoot {
+    if (!treeRoot) {
+        return nil;
+    }
+    if (treeRoot == thisNode || treeRoot == thatNode) {
+        return treeRoot;
+    }
+    BOOL isThisNodeOnLeft = [self checkNode:thisNode isInSubtreeOfNode:treeRoot.leftChild];
+    BOOL isThatNodeOnLeft = [self checkNode:thatNode isInSubtreeOfNode:treeRoot.leftChild];
+    if (isThisNodeOnLeft != isThatNodeOnLeft) {
+        return treeRoot;
+    }
+    BinaryTreeNode *nextRoot = isThisNodeOnLeft ? treeRoot.leftChild : treeRoot.rightChild;
+    return [self firstCommonAncestorOfNode:thisNode andNode:thatNode inTree:nextRoot];
+}
+
++ (BOOL)checkNode:(BinaryTreeNode *)childNode isInSubtreeOfNode:(BinaryTreeNode *)parentNode {
+    if (!childNode || !parentNode) {
+        return NO;
+    }
+    if (childNode == parentNode) {
+        return YES;
+    }
+    return [self checkNode:childNode isInSubtreeOfNode:parentNode.leftChild] ||
+    [self checkNode:childNode isInSubtreeOfNode:parentNode.rightChild];
+}
+
++ (BinaryTreeNode *)betterFirstCommonAncestorOfNode:(BinaryTreeNode *)thisNode andNode:(BinaryTreeNode *)thatNode
+                                             inTree:(BinaryTreeNode *)treeRoot {
+    BOOL isAncestor = NO;
+    BinaryTreeNode *commonAncestor =
+    [self betterFirstCommonAncestorOfNode:thisNode andNode:thatNode inTree:treeRoot isAncestor:&isAncestor];
+    if (isAncestor) {
+        return commonAncestor;
+    }
+    return nil;
+}
+
++ (BinaryTreeNode *)betterFirstCommonAncestorOfNode:(BinaryTreeNode *)thisNode andNode:(BinaryTreeNode *)thatNode
+                                             inTree:(BinaryTreeNode *)treeRoot isAncestor:(BOOL *)isAncestor {
+    if (!treeRoot) {
+        *isAncestor = NO;
+        return nil;
+    }
+    
+    if (treeRoot == thisNode && treeRoot == thatNode) {
+        *isAncestor = YES;
+        return treeRoot;
+    }
+    
+    BinaryTreeNode *rx =
+    [self betterFirstCommonAncestorOfNode:thisNode andNode:thatNode inTree:treeRoot.leftChild
+                                                    isAncestor:isAncestor];
+    if (*isAncestor) {
+        return rx;
+    }
+    
+    BinaryTreeNode *ry =
+    [self betterFirstCommonAncestorOfNode:thisNode andNode:thatNode inTree:treeRoot.rightChild
+                               isAncestor:isAncestor];
+    if (*isAncestor) {
+        return ry;
+    }
+    
+    if (rx && ry) {
+        *isAncestor = YES;
+        return treeRoot;
+    } else if (treeRoot == thisNode || treeRoot == thatNode) {
+        *isAncestor = rx || ry ? YES : NO;
+        return treeRoot;
+    } else {
+        *isAncestor = NO;
+        return rx ? rx : ry;
+    }
+}
+
 /**
- You have two very large binary trees: T1, with millions of nodes, and T2, with hundreds of nodes. 
+ You have two very large binary trees: T1, with millions of nodes, and T2, with hundreds of nodes.
  Create an algorithm to decide if T2 is a subtree of T1.
  
  A tree T2 is a subtree of T1 if there exists a node n in T1 such that the subtree of n is identical to T2. 
  That is, if you cut off the tree at node n, the two trees would be identical.
  */
 
++ (BOOL)isTree:(BinaryTreeNode *)t2 subTreeOfTree:(BinaryTreeNode *)t1 {
+    /**
+     (My) Solution:
+     - Pre-order DFS to find the position of root node of t2 in t1, that is, n (maybe more than one n in T1)
+     - traverse n and t2 at the same time with DFS; make sure every node in n and t2 are same
+     - 0(log(n) + log(m))
+     
+     Simple Solution (But not good):
+     - check if Pre-order and In-order traversal string of t2 is 'substring' of 
+     Pre-order and In-order traversal string of t1
+     - 0(n + m) memory
+     */
+    if (!t2) {
+        return NO;
+    }
+    return [self findNode:t2 inTree:t1];
+}
+
++ (BOOL)findNode:(BinaryTreeNode *)node inTree:(BinaryTreeNode *)tree {
+    if (!tree) {
+        return NO;
+    }
+    if ([node.data isEqualToNumber:tree.data]) {
+        if ([self matchTree:node withTree:tree]) {
+            return YES;
+        }
+    }
+    return [self findNode:node inTree:tree.leftChild] ||
+    [self findNode:node inTree:tree.rightChild];
+}
+
++ (BOOL)matchTree:(BinaryTreeNode *)thisTree withTree:(BinaryTreeNode *)thatTree {
+    if (!thisTree && !thatTree) {
+        return YES;
+    }
+    
+    if (!thisTree || !thatTree) {
+        return NO;
+    }
+    
+    if (![thisTree.data isEqualToNumber:thatTree.data]) {
+        return NO;
+    }
+    return [self matchTree:thisTree.leftChild withTree:thatTree.leftChild] &&
+    [self matchTree:thisTree.rightChild withTree:thatTree.rightChild];
+}
+
 /**
  You are given a binary tree in which each node contains a value. Design an algorithm to print all 
  paths which sum to a given value. The path does not need to start or end at the root or a leaf.
  */
+
++ (void)printPathsInBinaryTree:(BinaryTreeNode *)rootNode whichSumIs:(NSInteger)sum {
+    NSMutableArray *pathArray = [NSMutableArray array];
+    NSInteger treeDepth = [BinaryTreeNode heightOfTree:rootNode]+1;
+    // HACK: we MUST initialize array will null, in order to use subscript index
+    for (NSInteger i=0; i<treeDepth; i++) {
+        [pathArray addObject:[NSNull null]];
+    }
+    [self printPathInBinaryTree:rootNode whichSubIs:sum toArray:pathArray level:0];
+}
+
++ (void)printPathInBinaryTree:(BinaryTreeNode *)rootNode whichSubIs:(NSInteger)sum toArray:(NSMutableArray *)pathArray level:(NSInteger)level {
+    /**
+     TIP: we SHOULD NOT stop traversing when path sum equals to sum, e.g.:
+     1 + 3 = 4
+     1 + 3 - 2 + 5 - 3 = 4
+     */
+    if (!rootNode) {
+        return;
+    }
+    pathArray[level] = rootNode.data;
+    NSInteger pathSum = 0;
+    for (NSInteger i=level; i>=0; i--) {
+        pathSum += [pathArray[i] integerValue];
+        if (pathSum == sum) {
+            [self printPath:pathArray start:i end:level];
+        }
+    }
+    
+    [self printPathInBinaryTree:rootNode.leftChild whichSubIs:sum toArray:pathArray level:level+1];
+    [self printPathInBinaryTree:rootNode.rightChild whichSubIs:sum toArray:pathArray level:level+1];
+    
+    pathArray[level] = @(LONG_MIN);
+}
+
++ (void)printPath:(NSArray *)pathArray start:(NSInteger)start end:(NSInteger)end {
+    NSArray *realPathArray = [pathArray subarrayWithRange:NSMakeRange(start, end-start+1)];
+    NSLog(@"Path: %@", [realPathArray componentsJoinedByString:@" -> "]);
+}
 
 @end

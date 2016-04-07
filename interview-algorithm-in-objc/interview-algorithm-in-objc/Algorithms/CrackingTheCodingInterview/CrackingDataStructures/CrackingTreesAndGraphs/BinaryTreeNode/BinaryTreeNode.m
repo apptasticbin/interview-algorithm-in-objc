@@ -53,10 +53,23 @@
 }
 
 + (NSInteger)heightOfTree:(BinaryTreeNode *)root {
+    /**
+     - A tree consisting of only a root node has a height of 0
+     */
     if (!root) {
-        return 0;
+        return -1;
     }
     return MAX([self heightOfTree:root.leftChild], [self heightOfTree:root.rightChild]) + 1;
+}
+
+- (void)setLeftChild:(BinaryTreeNode *)leftChild {
+    _leftChild = leftChild;
+    _leftChild.parent = self;
+}
+
+- (void)setRightChild:(BinaryTreeNode *)rightChild {
+    _rightChild = rightChild;
+    _rightChild.parent = self;
 }
 
 #pragma mark - Private

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		793D3D0D1CB3D5EC00CB16AB /* GraphNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 793D3D0C1CB3D5EC00CB16AB /* GraphNode.m */; };
+		793D3D0E1CB3D5EC00CB16AB /* GraphNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 793D3D0C1CB3D5EC00CB16AB /* GraphNode.m */; };
 		7946C46D1CAB14ED001F0758 /* CrackingStacksAndQueues.m in Sources */ = {isa = PBXBuildFile; fileRef = 7946C46C1CAB14ED001F0758 /* CrackingStacksAndQueues.m */; };
 		7946C46E1CAB14ED001F0758 /* CrackingStacksAndQueues.m in Sources */ = {isa = PBXBuildFile; fileRef = 7946C46C1CAB14ED001F0758 /* CrackingStacksAndQueues.m */; };
 		7946C4701CAB1524001F0758 /* CrackingStacksAndQueuesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7946C46F1CAB1524001F0758 /* CrackingStacksAndQueuesTest.m */; };
@@ -59,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		793D3D0B1CB3D5EC00CB16AB /* GraphNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphNode.h; sourceTree = "<group>"; };
+		793D3D0C1CB3D5EC00CB16AB /* GraphNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphNode.m; sourceTree = "<group>"; };
 		7946C46B1CAB14ED001F0758 /* CrackingStacksAndQueues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrackingStacksAndQueues.h; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingStacksAndQueues/CrackingStacksAndQueues.h; sourceTree = "<group>"; };
 		7946C46C1CAB14ED001F0758 /* CrackingStacksAndQueues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingStacksAndQueues.m; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingStacksAndQueues/CrackingStacksAndQueues.m; sourceTree = "<group>"; };
 		7946C46F1CAB1524001F0758 /* CrackingStacksAndQueuesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingStacksAndQueuesTest.m; path = CrackingTheCodingInterviewTests/CrackingDataStructuresTest/CrackingStacksAndQueuesTest.m; sourceTree = "<group>"; };
@@ -125,6 +129,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		793D3D0A1CB3D5EC00CB16AB /* GraphNode */ = {
+			isa = PBXGroup;
+			children = (
+				793D3D0B1CB3D5EC00CB16AB /* GraphNode.h */,
+				793D3D0C1CB3D5EC00CB16AB /* GraphNode.m */,
+			);
+			name = GraphNode;
+			path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingTreesAndGraphs/GraphNode;
+			sourceTree = "<group>";
+		};
 		7946C46A1CAB12A1001F0758 /* CrackingStacksAndQueues */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +266,7 @@
 				79B3CB301CB0747C00D7DB97 /* CrackingTreesAndGraphs.h */,
 				79B3CB311CB0747C00D7DB97 /* CrackingTreesAndGraphs.m */,
 				79FC16B61CB27777004843CD /* BinaryTreeNode */,
+				793D3D0A1CB3D5EC00CB16AB /* GraphNode */,
 			);
 			name = CrackingTreesAndGraphs;
 			sourceTree = "<group>";
@@ -483,6 +498,7 @@
 				79B3CB2D1CAE9C4300D7DB97 /* LinkedObjectListNode.m in Sources */,
 				79B3CB241CAE94FC00D7DB97 /* AnimalShelter.m in Sources */,
 				79B3CB1F1CADD2EE00D7DB97 /* MyQueue.m in Sources */,
+				793D3D0D1CB3D5EC00CB16AB /* GraphNode.m in Sources */,
 				79FC16B91CB279AA004843CD /* BinaryTreeNode.m in Sources */,
 				79689AF51CA878AE0078DCB7 /* CrackingLinkedLists.m in Sources */,
 				79B3CB1A1CAD441B00D7DB97 /* SetOfStacks.m in Sources */,
@@ -508,6 +524,7 @@
 				79B3CB251CAE94FC00D7DB97 /* AnimalShelter.m in Sources */,
 				79AF04321CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m in Sources */,
 				79689AFD1CA882B10078DCB7 /* LinkedListNode.m in Sources */,
+				793D3D0E1CB3D5EC00CB16AB /* GraphNode.m in Sources */,
 				79FC16BA1CB279AA004843CD /* BinaryTreeNode.m in Sources */,
 				7946C4761CAB166D001F0758 /* Stack.m in Sources */,
 				79B3CB201CADD2EE00D7DB97 /* MyQueue.m in Sources */,
