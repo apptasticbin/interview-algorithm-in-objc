@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		793D3D0D1CB3D5EC00CB16AB /* GraphNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 793D3D0C1CB3D5EC00CB16AB /* GraphNode.m */; };
 		793D3D0E1CB3D5EC00CB16AB /* GraphNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 793D3D0C1CB3D5EC00CB16AB /* GraphNode.m */; };
+		793D3D141CB7BF6A00CB16AB /* CrackingBitManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 793D3D131CB7BF6A00CB16AB /* CrackingBitManipulation.m */; };
+		793D3D151CB7BF6A00CB16AB /* CrackingBitManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 793D3D131CB7BF6A00CB16AB /* CrackingBitManipulation.m */; };
+		793D3D181CB860CC00CB16AB /* CrackingBitManipulationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 793D3D171CB860CC00CB16AB /* CrackingBitManipulationTest.m */; };
 		7946C46D1CAB14ED001F0758 /* CrackingStacksAndQueues.m in Sources */ = {isa = PBXBuildFile; fileRef = 7946C46C1CAB14ED001F0758 /* CrackingStacksAndQueues.m */; };
 		7946C46E1CAB14ED001F0758 /* CrackingStacksAndQueues.m in Sources */ = {isa = PBXBuildFile; fileRef = 7946C46C1CAB14ED001F0758 /* CrackingStacksAndQueues.m */; };
 		7946C4701CAB1524001F0758 /* CrackingStacksAndQueuesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7946C46F1CAB1524001F0758 /* CrackingStacksAndQueuesTest.m */; };
@@ -63,6 +66,9 @@
 /* Begin PBXFileReference section */
 		793D3D0B1CB3D5EC00CB16AB /* GraphNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphNode.h; sourceTree = "<group>"; };
 		793D3D0C1CB3D5EC00CB16AB /* GraphNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphNode.m; sourceTree = "<group>"; };
+		793D3D121CB7BF6A00CB16AB /* CrackingBitManipulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrackingBitManipulation.h; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingBitManipulation/CrackingBitManipulation.h; sourceTree = "<group>"; };
+		793D3D131CB7BF6A00CB16AB /* CrackingBitManipulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingBitManipulation.m; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingBitManipulation/CrackingBitManipulation.m; sourceTree = "<group>"; };
+		793D3D171CB860CC00CB16AB /* CrackingBitManipulationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingBitManipulationTest.m; path = CrackingTheCodingInterviewTests/CrackingConceptsAndAlgorithmsTest/CrackingBitManipulationTest.m; sourceTree = "<group>"; };
 		7946C46B1CAB14ED001F0758 /* CrackingStacksAndQueues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrackingStacksAndQueues.h; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingStacksAndQueues/CrackingStacksAndQueues.h; sourceTree = "<group>"; };
 		7946C46C1CAB14ED001F0758 /* CrackingStacksAndQueues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingStacksAndQueues.m; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingStacksAndQueues/CrackingStacksAndQueues.m; sourceTree = "<group>"; };
 		7946C46F1CAB1524001F0758 /* CrackingStacksAndQueuesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingStacksAndQueuesTest.m; path = CrackingTheCodingInterviewTests/CrackingDataStructuresTest/CrackingStacksAndQueuesTest.m; sourceTree = "<group>"; };
@@ -137,6 +143,31 @@
 			);
 			name = GraphNode;
 			path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingTreesAndGraphs/GraphNode;
+			sourceTree = "<group>";
+		};
+		793D3D101CB7BE3800CB16AB /* CrackingConceptsAndAlgorithms */ = {
+			isa = PBXGroup;
+			children = (
+				793D3D111CB7BEA100CB16AB /* CrackingBitManipulation */,
+			);
+			name = CrackingConceptsAndAlgorithms;
+			sourceTree = "<group>";
+		};
+		793D3D111CB7BEA100CB16AB /* CrackingBitManipulation */ = {
+			isa = PBXGroup;
+			children = (
+				793D3D121CB7BF6A00CB16AB /* CrackingBitManipulation.h */,
+				793D3D131CB7BF6A00CB16AB /* CrackingBitManipulation.m */,
+			);
+			name = CrackingBitManipulation;
+			sourceTree = "<group>";
+		};
+		793D3D161CB8606D00CB16AB /* CrackingConceptsAndAlgorithmsTest */ = {
+			isa = PBXGroup;
+			children = (
+				793D3D171CB860CC00CB16AB /* CrackingBitManipulationTest.m */,
+			);
+			name = CrackingConceptsAndAlgorithmsTest;
 			sourceTree = "<group>";
 		};
 		7946C46A1CAB12A1001F0758 /* CrackingStacksAndQueues */ = {
@@ -350,6 +381,7 @@
 		79C5DC461CA2B968005DFD1B /* CrackingTheCodingInterview */ = {
 			isa = PBXGroup;
 			children = (
+				793D3D101CB7BE3800CB16AB /* CrackingConceptsAndAlgorithms */,
 				79C5DC471CA2B9AD005DFD1B /* CrackingDataStructures */,
 			);
 			name = CrackingTheCodingInterview;
@@ -369,6 +401,7 @@
 		79C5DC4C1CA2BAF1005DFD1B /* CrackingTheCodingInterviewTests */ = {
 			isa = PBXGroup;
 			children = (
+				793D3D161CB8606D00CB16AB /* CrackingConceptsAndAlgorithmsTest */,
 				79C5DC4D1CA2BB01005DFD1B /* CrackingDataStructuresTest */,
 			);
 			name = CrackingTheCodingInterviewTests;
@@ -504,6 +537,7 @@
 				79B3CB1A1CAD441B00D7DB97 /* SetOfStacks.m in Sources */,
 				79C5DC261CA2B8FC005DFD1B /* ViewController.m in Sources */,
 				79B3CB151CAD3E3B00D7DB97 /* StackWithMinimum.m in Sources */,
+				793D3D141CB7BF6A00CB16AB /* CrackingBitManipulation.m in Sources */,
 				7946C47A1CAB168C001F0758 /* Queue.m in Sources */,
 				79689AFC1CA882B10078DCB7 /* LinkedListNode.m in Sources */,
 				79AF04311CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m in Sources */,
@@ -530,6 +564,7 @@
 				79B3CB201CADD2EE00D7DB97 /* MyQueue.m in Sources */,
 				79B3CB2E1CAE9C4300D7DB97 /* LinkedObjectListNode.m in Sources */,
 				79B3CB161CAD3E3B00D7DB97 /* StackWithMinimum.m in Sources */,
+				793D3D151CB7BF6A00CB16AB /* CrackingBitManipulation.m in Sources */,
 				79689AF81CA878CB0078DCB7 /* CrackingLinkedListsTest.m in Sources */,
 				7946C4701CAB1524001F0758 /* CrackingStacksAndQueuesTest.m in Sources */,
 				79689AF61CA878AE0078DCB7 /* CrackingLinkedLists.m in Sources */,
@@ -537,6 +572,7 @@
 				79C5DC4F1CA2BB55005DFD1B /* CrackingArraysAndStringsTest.m in Sources */,
 				79B3CB351CB0749A00D7DB97 /* CrackingTreesAndGraphsTest.m in Sources */,
 				79B3CB291CAE952300D7DB97 /* Animal.m in Sources */,
+				793D3D181CB860CC00CB16AB /* CrackingBitManipulationTest.m in Sources */,
 				7946C46E1CAB14ED001F0758 /* CrackingStacksAndQueues.m in Sources */,
 				7946C47B1CAB168C001F0758 /* Queue.m in Sources */,
 			);

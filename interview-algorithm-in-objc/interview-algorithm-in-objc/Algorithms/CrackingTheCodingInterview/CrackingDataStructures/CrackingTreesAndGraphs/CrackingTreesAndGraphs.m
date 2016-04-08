@@ -456,6 +456,9 @@
      TIP: we SHOULD NOT stop traversing when path sum equals to sum, e.g.:
      1 + 3 = 4
      1 + 3 - 2 + 5 - 3 = 4
+     
+     The space complexity is 0(log n), since the algorithm will recurse 0(log n) times and the path 
+     parameter is only allocated once ( at O(log n) space ) during this recursion
      */
     if (!rootNode) {
         return;
