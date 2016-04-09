@@ -53,6 +53,66 @@
                    302+1);
     XCTAssertEqual([CrackingBitManipulation updateBitsOfNumber:actualNumber at:4 withValue:1],
                    302+16);
+    XCTAssertEqual(expectNumber, [self integerNumberFromBinaryString:@"100101110"]);
+}
+
+- (void)testInsertMIntoN {
+    int32_t N = [self integerNumberFromBinaryString:@"100101110"];    // 100101110
+    int32_t M = [self integerNumberFromBinaryString:@"1100"];     // 1100
+    
+    int32_t actualNumber = [CrackingBitManipulation insertBitsOfM:M toN:N fromBit:7 toBit:4];
+    int32_t expectNumber = [self integerNumberFromBinaryString:@"111001110"];
+    
+    XCTAssertEqual(actualNumber, expectNumber);
+    
+    actualNumber = [CrackingBitManipulation cleanInsertBitsOfM:M toN:N fromBit:7 toBit:4];
+    XCTAssertEqual(actualNumber, expectNumber);
+}
+
+- (void)testBinaryRepresentationOfFractionNumber {
+    double testNumber = 3.5f;
+    NSString *binaryString = [CrackingBitManipulation binaryRepresentationOfFractionNumber:testNumber];
+    XCTAssertEqualObjects(binaryString, @"0011.1000");
+    
+    testNumber = [self integerNumberFromBinaryString:@"101100011010101100011011100001"];
+    testNumber = testNumber + 0.5;
+    binaryString = [CrackingBitManipulation binaryRepresentationOfFractionNumber:testNumber];
+    XCTAssertEqualObjects(binaryString, @"00101100011010101100011011100001.1000");
+    
+    testNumber = testNumber + 0.2093;
+    binaryString = [CrackingBitManipulation binaryRepresentationOfFractionNumber:testNumber];
+    XCTAssertEqualObjects(binaryString, @"ERROR");
+}
+
+- (void)testPreviousAndNextNumberWithSameAmountOfOnes {
+    NSInteger testNumber = [self integerNumberFromBinaryString:@"110010111000"];
+    NSInteger expectNextSmallestNumber = [self integerNumberFromBinaryString:@"110011000011"];
+    NSInteger actualNextSmallestNumber = [CrackingBitManipulation nextSmallestNumberWithSameAmountOfOne:testNumber];
+    XCTAssertEqual(actualNextSmallestNumber, expectNextSmallestNumber);
+    NSInteger expectPreviousLargestNumber = [self integerNumberFromBinaryString:@"110010110100"];
+    NSInteger actualPreviousLargestNumber = [CrackingBitManipulation previousLargestNumberWithSameAmountOfOne:testNumber];
+    XCTAssertEqual(actualPreviousLargestNumber, expectPreviousLargestNumber);
+    
+    testNumber = [self integerNumberFromBinaryString:@"110010111001"];
+    expectNextSmallestNumber = [self integerNumberFromBinaryString:@"110010111010"];
+    actualNextSmallestNumber = [CrackingBitManipulation nextSmallestNumberWithSameAmountOfOne:testNumber];
+    XCTAssertEqual(actualNextSmallestNumber, expectNextSmallestNumber);
+    expectPreviousLargestNumber = [self integerNumberFromBinaryString:@"110010110110"];
+    actualPreviousLargestNumber = [CrackingBitManipulation previousLargestNumberWithSameAmountOfOne:testNumber];
+    XCTAssertEqual(actualPreviousLargestNumber, expectPreviousLargestNumber);
+}
+
+#pragma mark - Private
+
+- (int32_t)integerNumberFromBinaryString:(NSString *)binaryString {
+    int32_t number = 0;
+    for (NSInteger i=binaryString.length-1, j=0; i >= 0; i--, j++) {
+        NSString *bit = [binaryString substringWithRange:NSMakeRange(i, 1)];
+        if ([bit isEqualToString:@"1"]) {
+            number = [CrackingBitManipulation setBitOfNumber:number at:j];
+        }
+    }
+    return number;
 }
 
 @end

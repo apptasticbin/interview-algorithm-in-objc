@@ -73,9 +73,9 @@
      ~ 11100000011
      */
     int32_t jMask = (1 << (j+1))-1;
-    int32_t iMask = ~((1 << i)-1);
+    int32_t iMask = ~((1 << (i))-1);
     int32_t mask = ~(jMask & iMask);
-    return (n & mask) | (m << j);
+    return (n & mask) | (m << i);
 }
 
 + (int32_t)cleanInsertBitsOfM:(int32_t)m toN:(int32_t)n fromBit:(NSInteger)j toBit:(NSInteger)i {
@@ -107,13 +107,149 @@
  */
 
 /**
+ NOTICE: my implementation can handle decimal number which is GREATER than 1
+ e.g. 3.5 can work as well.
+ */
+
++ (NSString *)binaryRepresentationOfFractionNumber:(double)number {
+    NSInteger integerPart = number;
+    double fractionPart = number - integerPart;
+    NSString *integerPartString = [self binaryStringFromInteger:integerPart];
+    if (integerPartString.length > 32) {
+        return @"ERROR";
+    }
+    NSString *fractionPartString = [self binaryStringFromFraction:fractionPart withCharacterLimit:32-integerPartString.length];
+    if ([fractionPartString isEqualToString:@"ERROR"]) {
+        return @"ERROR";
+    }
+    return [NSString stringWithFormat:@"%@.%@", integerPartString, fractionPartString];
+}
+
+/**
+ http://baike.baidu.com/view/1426817.htm
+ － 整数转二进制：除2取余， 倒序排列
+ － 小数转二进制：乘2取整， 正序排列
+ */
+
++ (NSString *)binaryStringFromInteger:(NSInteger)integer {
+    NSMutableString *binaryString = [NSMutableString string];
+    do {
+        NSInteger modulo = integer % 2;
+        [binaryString insertString:[self bitToString:modulo] atIndex:0];
+        integer = integer / 2;
+    } while (integer);
+    return [self insertZerosToBitString:binaryString prefix:YES];
+}
+
++ (NSString *)binaryStringFromFraction:(double)fraction withCharacterLimit:(NSInteger)characterLimit {
+    NSMutableString *binaryString = [NSMutableString string];
+    NSInteger counter = 0;
+    while (fraction > 0) {
+        if (counter > characterLimit) {
+            return @"ERROR";
+        }
+        NSInteger integer = fraction * 2;
+        [binaryString appendString:[self bitToString:integer]];
+        fraction = (double)(fraction * 2 - integer);
+        counter++;
+    }
+    return [self insertZerosToBitString:binaryString prefix:NO];
+}
+
++ (NSString *)bitToString:(NSInteger)bit {
+    return bit ? @"1" : @"0";
+}
+
++ (NSString *)insertZerosToBitString:(NSString *)bitString prefix:(BOOL)prefix {
+    NSInteger missBitNum = 4 - bitString.length % 4;
+    NSMutableString *zeroString = [NSMutableString string];
+    for (NSInteger i=0; i<missBitNum; i++) {
+        [zeroString appendString:@"0"];
+    }
+    if (prefix) {
+        return [NSString stringWithFormat:@"%@%@", zeroString, bitString];
+    } else {
+        return [NSString stringWithFormat:@"%@%@", bitString, zeroString];
+    }
+}
+
+/**
  Given a positive integer, print the next smallest and the next largest number 
  that have the same number of 1 bits in their binary representation
  */
 
 /**
- Explainwhat the following code does: ((n & (n-1)) == 0).
+ Solutions:
+ - Brute force: increasing or decreasing 1, and counting the 1s
+ - Bit Operation
+ - Clever Arithmetic
  */
+
++ (NSUInteger)nextSmallestNumberWithSameAmountOfOne:(NSUInteger)number {
+    /** 
+     number: 0110 -> 6
+     next largest: 0101 -> 5
+     next smallest: 1001 -> 9
+     */
+    NSUInteger counterNumber = number;
+    NSUInteger trailingZeroCount = 0;
+    NSUInteger trailingOneCount = 0;
+    while ((counterNumber & 1) == 0 && counterNumber != 0) {
+        trailingZeroCount++;
+        counterNumber >>= 1;
+    }
+    while ((counterNumber & 1) == 1) {
+        trailingOneCount++;
+        counterNumber >>= 1;
+    }
+    if (trailingOneCount + trailingZeroCount == 31 ||
+        trailingOneCount + trailingZeroCount == 0) {
+        return ULONG_MAX;
+    }
+    // Arithmetic: number + (1 << trailingZeroCount) + (1 << (trailingOneCount - 1)) - 1
+    NSUInteger mostRightNonTrailingZeroPos = trailingZeroCount + trailingOneCount;
+    number |= 1 << mostRightNonTrailingZeroPos;
+    number &= ~((1 << mostRightNonTrailingZeroPos) - 1);
+    number |= (1 << (trailingOneCount - 1)) - 1;
+    return number;
+}
+
++ (NSUInteger)previousLargestNumberWithSameAmountOfOne:(NSUInteger)number {
+    NSUInteger counterNumber = number;
+    NSUInteger trailingZeroCount = 0;
+    NSUInteger trailingOneCount = 0;
+    while ((counterNumber & 1) == 1) {
+        trailingOneCount++;
+        counterNumber >>= 1;
+    }
+    
+    if (!counterNumber) {
+        return ULONG_MAX;
+    }
+    
+    while ((counterNumber & 1) == 0 && counterNumber != 0) {
+        trailingZeroCount++;
+        counterNumber >>= 1;
+    }
+    // Arithmetic: number - (1 << trailingOneCount) - (1 << (trailingZeroCount - 1)) + 1
+    NSUInteger mostRightNonTrailingOnePos = trailingOneCount + trailingZeroCount;
+    number &= ((~0) << (mostRightNonTrailingOnePos + 1));
+    NSUInteger mask = (1 << (trailingOneCount + 1)) - 1;
+    number |= (mask << (trailingZeroCount - 1));
+    return number;
+}
+
+/**
+ Explain what the following code does: ((n & (n-1)) == 0).
+ */
+
++ (BOOL)isNumberPowerOfTwo:(NSUInteger)number {
+    /**
+     My answer: check if n is power of 2
+     - or if n is 0
+     */
+    return (number & (number-1)) == 0;
+}
 
 /**
  Write a function to determine the number of bits required to convert integer A to integer B.

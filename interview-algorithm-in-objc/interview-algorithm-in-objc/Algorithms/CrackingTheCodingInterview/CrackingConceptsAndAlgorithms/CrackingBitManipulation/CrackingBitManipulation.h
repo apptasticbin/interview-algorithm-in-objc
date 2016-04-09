@@ -19,5 +19,8 @@
 
 + (int32_t)insertBitsOfM:(int32_t)m toN:(int32_t)n fromBit:(NSInteger)j toBit:(NSInteger)i;
 + (int32_t)cleanInsertBitsOfM:(int32_t)m toN:(int32_t)n fromBit:(NSInteger)j toBit:(NSInteger)i;
++ (NSString *)binaryRepresentationOfFractionNumber:(double)number;
++ (NSUInteger)nextSmallestNumberWithSameAmountOfOne:(NSUInteger)number;
++ (NSUInteger)previousLargestNumberWithSameAmountOfOne:(NSUInteger)number;
 
 @end
