@@ -102,6 +102,27 @@
     XCTAssertEqual(actualPreviousLargestNumber, expectPreviousLargestNumber);
 }
 
+- (void)testNumberOfBitsToConvertIntegers {
+    NSInteger integerA = [self integerNumberFromBinaryString:@"11001011100"];
+    NSInteger integerB = [self integerNumberFromBinaryString:@"10110101111"];
+    NSInteger expectResult = 8;
+    NSInteger actualResult = [CrackingBitManipulation numberOfBitsToConvertIntegerA:integerA toIntegerB:integerB];
+    XCTAssertEqual(actualResult, expectResult);
+    
+    integerA = [self integerNumberFromBinaryString:@"00000000000"];
+    integerB = [self integerNumberFromBinaryString:@"11111111111"];
+    expectResult = 11;
+    actualResult = [CrackingBitManipulation numberOfBitsToConvertIntegerA:integerA toIntegerB:integerB];
+    XCTAssertEqual(actualResult, expectResult);
+}
+
+- (void)testSwapOddAndEventBitsOfNumber {
+    int32_t testNumber = [self integerNumberFromBinaryString:  @"0100011101010010"];
+    int32_t expectResult = [self integerNumberFromBinaryString:@"1000101110100001"];
+    int32_t actualResult = [CrackingBitManipulation swapOddAndEventBitsOfNumber:testNumber];
+    XCTAssertEqual(actualResult, expectResult);
+}
+
 #pragma mark - Private
 
 - (int32_t)integerNumberFromBinaryString:(NSString *)binaryString {

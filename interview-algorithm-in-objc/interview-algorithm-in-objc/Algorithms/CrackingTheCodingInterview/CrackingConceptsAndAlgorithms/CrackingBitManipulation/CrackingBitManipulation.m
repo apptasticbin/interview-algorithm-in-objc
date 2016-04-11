@@ -260,24 +260,95 @@
  Output: 2
  */
 
++ (NSInteger)numberOfBitsToConvertIntegerA:(NSUInteger)a toIntegerB:(NSUInteger)b {
+    NSInteger counter = 0;
+    NSInteger c = a ^ b;
+    while (c) {
+        if ((c & 1) == 1) {
+            counter++;
+        }
+        c >>= 1;
+    }
+    return counter;
+}
+
++ (NSInteger)betterNumberOfBitsToConvertIntegerA:(NSUInteger)a toIntegerB:(NSUInteger)b {
+    NSInteger counter = 0;
+    for (NSInteger c = a ^ b; c; c >>= 1) {
+        counter += c & 1;
+    }
+    return counter;
+}
+
++ (NSInteger)evenBetterNumberOfBitsToConvertIntegerA:(NSUInteger)a toIntegerB:(NSUInteger)b {
+    /**
+     - The code is one of those bit manipulation problems that comes up sometimes in interviews.
+     Though it'd be hard to come up with it on the spot if you've never seen it before,
+     it is useful to remember the trick for your interview
+     - TRICK: c & (c-1): each "bit or" operation will remove one '1' bit
+     e.g. (101000) & (100111) = 100000
+     */
+    NSInteger counter = 0;
+    for (NSInteger c = a ^ b; c; c &= (c-1)) {
+        counter += c & 1;
+    }
+    return counter;
+}
+
 /**
- Write a program to swap odd and even bits in an integer with asfew instructions 
- as possible (e.g., bit 0 and bit 1 are swapped, bit 2 and bit 3 are swapped, and soon).
+ Write a program to swap odd and even bits in an integer with as few instructions
+ as possible (e.g., bit 0 and bit 1 are swapped, bit 2 and bit 3 are swapped, and so on).
  */
+
++ (int32_t)swapOddAndEventBitsOfNumber:(int32_t)number {
+    // 10101010101010101010101010101010
+    int32_t oddMask = 0xAAAAAAAA;
+    // 01010101010101010101010101010101
+    int32_t evenMask = 0x55555555;
+    
+    int32_t oddBits = number & oddMask;
+    int32_t evenBits = number & evenMask;
+    
+    return (oddBits >> 1) | (evenBits << 1);
+}
 
 /**
  An array A contains all the integers from 0 to n, except for one number which is missing. 
  In this problem, we cannot access an entire integer in A with a single operation. The elements 
  of A are represented in binary, and the only operation we can use to access them is "fetch the jth bit of A[i]," 
- which takes constant time. Write code to find the missing integer. Can you do it in 0(n) time?
+ which takes constant time. Write code to find the missing integer. Can you do it in O(n) time?
  */
+
++ (NSInteger)findMissIntegerInArray:(NSArray *)array {
+    /**
+     - very similar sounding problem: Given a list of numbers from 0 to n, with exactly one number removed,
+     find the missing number. This problem can be solved by simply adding the list of numbers and comparing 
+     it to the actual sum of 0 through n, which is n * (n + 1) / 2. The difference will be the missing number.
+     - we can sum up all bits octal values and compare to n * (n + 1) / 2. 
+     But time complexity is O(n * length(n)) => O(n * log(n))
+     -
+     */
+    BOOL leastSignificantBit = NO;
+    for (NSInteger i=0; i<array.count; i++) {
+        if ([self bitOfNumberAtIndex:i bitIndex:0 inArray:array] != leastSignificantBit) {
+            return i;
+        }
+        leastSignificantBit = !leastSignificantBit;
+    }
+    return -1;
+}
+
++ (BOOL)bitOfNumberAtIndex:(NSInteger)numberIndex bitIndex:(NSInteger)bitIndex inArray:(NSArray *)array {
+    NSInteger number = [array[numberIndex] integerValue];
+    return [self getBitOfNumber:number at:bitIndex];
+}
 
 /**
  A monochrome screen is stored as a single array of bytes, allowing eight consecutive pixels to be stored in one byte.
- The screen has width w, where w is divisible by 8 (that is,no byte will be split across rows).The height of the screen,
+ The screen has width w, where w is divisible by 8 (that is,no byte will be split across rows). The height of the screen,
  of course, can be derived from the length of the array and the width. 
  
- Implement a function drawHorizontalline(byte[] screen, int width, int xl, int x2, int y) which draws ahorizontal line from (xl, y)to(x2, y).
+ Implement a function drawHorizontalline(byte[] screen, int width, int xl, int x2, int y) which draws a horizontal line from (xl, y) to (x2, y).
  */
 
 @end

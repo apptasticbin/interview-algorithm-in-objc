@@ -22,5 +22,7 @@
 + (NSString *)binaryRepresentationOfFractionNumber:(double)number;
 + (NSUInteger)nextSmallestNumberWithSameAmountOfOne:(NSUInteger)number;
 + (NSUInteger)previousLargestNumberWithSameAmountOfOne:(NSUInteger)number;
++ (NSInteger)numberOfBitsToConvertIntegerA:(NSUInteger)a toIntegerB:(NSUInteger)b;
++ (int32_t)swapOddAndEventBitsOfNumber:(int32_t)number;
 
 @end
