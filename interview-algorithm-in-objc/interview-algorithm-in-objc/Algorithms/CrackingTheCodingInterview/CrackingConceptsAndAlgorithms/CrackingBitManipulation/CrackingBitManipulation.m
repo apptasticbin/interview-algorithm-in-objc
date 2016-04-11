@@ -326,16 +326,29 @@
      it to the actual sum of 0 through n, which is n * (n + 1) / 2. The difference will be the missing number.
      - we can sum up all bits octal values and compare to n * (n + 1) / 2. 
      But time complexity is O(n * length(n)) => O(n * log(n))
-     -
+     - O(n + n/2 + n/4 + ....) => O(n)
+     - better solution: check bit balance of least significant bits one by one
      */
-    BOOL leastSignificantBit = NO;
-    for (NSInteger i=0; i<array.count; i++) {
-        if ([self bitOfNumberAtIndex:i bitIndex:0 inArray:array] != leastSignificantBit) {
-            return i;
-        }
-        leastSignificantBit = !leastSignificantBit;
+    return [self findMissIntegerInArray:array column:0];
+}
+
++ (NSInteger)findMissIntegerInArray:(NSArray *)array column:(NSInteger)column {
+    if (column > array.count) {
+        return 0;
     }
-    return -1;
+    NSMutableArray *oneBitNumbers = [NSMutableArray array];
+    NSMutableArray *zeroBitNumbers = [NSMutableArray array];
+    for (NSInteger i=0; i<array.count; i++) {
+        BOOL bitValue = [self bitOfNumberAtIndex:i bitIndex:column inArray:array];
+        bitValue ? [oneBitNumbers addObject:array[i]] : [zeroBitNumbers addObject:array[i]];
+    }
+    if (zeroBitNumbers.count <= oneBitNumbers.count) {
+        NSInteger missInteger = [self findMissIntegerInArray:zeroBitNumbers column:column+1];
+        return (missInteger << 1) | 0;
+    } else {
+        NSInteger missInteger = [self findMissIntegerInArray:oneBitNumbers column:column+1];
+        return (missInteger << 1) | 1;
+    }
 }
 
 + (BOOL)bitOfNumberAtIndex:(NSInteger)numberIndex bitIndex:(NSInteger)bitIndex inArray:(NSArray *)array {
@@ -345,10 +358,60 @@
 
 /**
  A monochrome screen is stored as a single array of bytes, allowing eight consecutive pixels to be stored in one byte.
- The screen has width w, where w is divisible by 8 (that is,no byte will be split across rows). The height of the screen,
+ The screen has width w, where w is divisible by 8 (that is, no byte will be split across rows). The height of the screen,
  of course, can be derived from the length of the array and the width. 
  
- Implement a function drawHorizontalline(byte[] screen, int width, int xl, int x2, int y) which draws a horizontal line from (xl, y) to (x2, y).
+ Implement a function drawHorizontalline(byte[] screen, int width, int x1, int x2, int y) which draws a horizontal line from (xl, y) to (x2, y).
  */
+
++ (void)drawHorizontalLingOnScreen:(NSMutableArray *)screen withWidth:(NSInteger)width
+                            fromX1:(NSInteger)x1 toX2:(NSInteger)x2 withSameY:(NSInteger)y {
+    NSInteger screenHeight = screen.count * 8 / width;
+    if (y >= screenHeight) {
+        return;
+    }
+    NSInteger arrayIndexOfX1 = [self arrayIndexOfPixelAtX:x1 y:y width:width];
+    NSInteger arrayIndexOfX2 = [self arrayIndexOfPixelAtX:x2 y:y width:width];
+    NSInteger bitIndexOfX1 = [self bitIndexOfPixelAtX:x1];
+    NSInteger bitIndexOfX2 = [self bitIndexOfPixelAtX:x2];
+    
+    NSInteger firstFullByte = arrayIndexOfX1;
+    if (bitIndexOfX1 != 0) {
+        firstFullByte++;
+    }
+    NSInteger lastFullByte = arrayIndexOfX2;
+    if (bitIndexOfX2 != 7) {
+        lastFullByte--;
+    }
+    
+    // set full bytes between x1 and x2 to 0xFF
+    for (NSInteger i=firstFullByte; i<=lastFullByte; i++) {
+        screen[i] = @(0xFF);
+    }
+    
+    Byte x1Mask = 0xFF >> bitIndexOfX1;         // 0xFF >> 3 = 00011111
+    Byte x2Mask = ~(0xFF >> (bitIndexOfX2+1));  // ~(0XFF >> 4) = 11110000
+    if (arrayIndexOfX1 == arrayIndexOfX2) {
+        Byte mask = x1Mask & x2Mask;
+        screen[arrayIndexOfX1] = @([screen[arrayIndexOfX1] unsignedCharValue] | mask);
+    } else {
+        if (bitIndexOfX1 != 0) {
+            screen[arrayIndexOfX1] = @([screen[arrayIndexOfX1] unsignedCharValue] | x1Mask);
+        }
+        if (bitIndexOfX2 != 7) {
+            screen[arrayIndexOfX2] = @([screen[arrayIndexOfX2] unsignedCharValue] | x2Mask);
+        }
+    }
+}
+
++ (NSInteger)arrayIndexOfPixelAtX:(NSInteger)x y:(NSInteger)y width:(NSInteger)width {
+    NSInteger arrayPerRow = width / 8;
+    NSInteger arrayIndex = arrayPerRow * y + x / 8;
+    return arrayIndex;
+}
+
++ (NSInteger)bitIndexOfPixelAtX:(NSInteger)x {
+    return x % 8;
+}
 
 @end

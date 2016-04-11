@@ -24,5 +24,10 @@
 + (NSUInteger)previousLargestNumberWithSameAmountOfOne:(NSUInteger)number;
 + (NSInteger)numberOfBitsToConvertIntegerA:(NSUInteger)a toIntegerB:(NSUInteger)b;
 + (int32_t)swapOddAndEventBitsOfNumber:(int32_t)number;
++ (NSInteger)findMissIntegerInArray:(NSArray *)array;
++ (void)drawHorizontalLingOnScreen:(NSMutableArray *)screen withWidth:(NSInteger)width
+                            fromX1:(NSInteger)x1 toX2:(NSInteger)x2 withSameY:(NSInteger)y;
+
++ (NSString *)binaryStringFromInteger:(NSInteger)integer;
 
 @end

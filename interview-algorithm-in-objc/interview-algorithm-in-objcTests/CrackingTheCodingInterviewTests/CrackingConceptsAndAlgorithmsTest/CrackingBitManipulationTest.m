@@ -123,6 +123,20 @@
     XCTAssertEqual(actualResult, expectResult);
 }
 
+- (void)testFindMissIntegerInArray {
+    NSMutableArray *integerArray = [self numberSequenceFromZeroToN:10];
+    [integerArray removeObjectAtIndex:4]; // which is number 4
+    NSInteger expectResult = 4;
+    NSInteger actualResult = [CrackingBitManipulation findMissIntegerInArray:integerArray];
+    XCTAssertEqual(actualResult, expectResult);
+}
+
+- (void)testDrawHorizontalLingOnScreen {
+    NSMutableArray *testScreen = [self arrayWithSize:10];
+    [CrackingBitManipulation drawHorizontalLingOnScreen:testScreen withWidth:40 fromX1:15 toX2:35 withSameY:1];
+    NSLog(@"%@", testScreen);
+}
+
 #pragma mark - Private
 
 - (int32_t)integerNumberFromBinaryString:(NSString *)binaryString {
@@ -134,6 +148,22 @@
         }
     }
     return number;
+}
+
+- (NSMutableArray *)numberSequenceFromZeroToN:(NSInteger)n {
+    NSMutableArray *array = [NSMutableArray array];
+    for (NSInteger i=0; i<n; i++) {
+        [array addObject:@(i)];
+    }
+    return array;
+}
+
+- (NSMutableArray *)arrayWithSize:(NSInteger)size {
+    NSMutableArray *array = [NSMutableArray array];
+    for (NSInteger i=0; i<size; i++) {
+        [array addObject:@(0)];
+    }
+    return array;
 }
 
 @end
