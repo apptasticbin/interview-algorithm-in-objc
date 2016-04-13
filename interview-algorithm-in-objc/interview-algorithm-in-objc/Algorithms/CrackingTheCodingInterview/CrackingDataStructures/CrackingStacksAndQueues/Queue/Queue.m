@@ -48,4 +48,11 @@
     return !self.count;
 }
 
+- (id)peek {
+    if (![self isEmpty]) {
+        return self.first.data;
+    }
+    return nil;
+}
+
 @end

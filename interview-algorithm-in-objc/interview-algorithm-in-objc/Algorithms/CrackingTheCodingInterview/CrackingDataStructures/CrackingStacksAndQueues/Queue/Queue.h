@@ -20,5 +20,6 @@
 - (void)enqueue:(id)data;
 - (id)dequeue;
 - (BOOL)isEmpty;
+- (id)peek;
 
 @end
