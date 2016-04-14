@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		79231A971CBD9E8200E1D566 /* CrackingMathematicsAndProbability.m in Sources */ = {isa = PBXBuildFile; fileRef = 79231A961CBD9E8200E1D566 /* CrackingMathematicsAndProbability.m */; };
 		79231A981CBD9E8200E1D566 /* CrackingMathematicsAndProbability.m in Sources */ = {isa = PBXBuildFile; fileRef = 79231A961CBD9E8200E1D566 /* CrackingMathematicsAndProbability.m */; };
-		79231A9B1CBDA35300E1D566 /* CrackingMathematicsAndProbabilityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79231A9A1CBDA35300E1D566 /* CrackingMathematicsAndProbabilityTest.m */; };
 		793D3D0D1CB3D5EC00CB16AB /* GraphNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 793D3D0C1CB3D5EC00CB16AB /* GraphNode.m */; };
 		793D3D0E1CB3D5EC00CB16AB /* GraphNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 793D3D0C1CB3D5EC00CB16AB /* GraphNode.m */; };
 		793D3D141CB7BF6A00CB16AB /* CrackingBitManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 793D3D131CB7BF6A00CB16AB /* CrackingBitManipulation.m */; };
@@ -34,6 +33,8 @@
 		799CCE5F1CBFCE7A009CB3C6 /* HashTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 799CCE5D1CBFCE7A009CB3C6 /* HashTable.m */; };
 		799CCE621CBFD07A009CB3C6 /* HashTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 799CCE611CBFD07A009CB3C6 /* HashTableCell.m */; };
 		799CCE631CBFD07A009CB3C6 /* HashTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 799CCE611CBFD07A009CB3C6 /* HashTableCell.m */; };
+		799CCE651CC027C3009CB3C6 /* CrackingMathematicsAndProbabilityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 799CCE641CC027C3009CB3C6 /* CrackingMathematicsAndProbabilityTest.m */; };
+		799CCE661CC027C3009CB3C6 /* CrackingMathematicsAndProbabilityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 799CCE641CC027C3009CB3C6 /* CrackingMathematicsAndProbabilityTest.m */; };
 		79AF04311CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AF04301CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m */; };
 		79AF04321CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AF04301CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m */; };
 		79B3CB151CAD3E3B00D7DB97 /* StackWithMinimum.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CB141CAD3E3B00D7DB97 /* StackWithMinimum.m */; };
@@ -75,7 +76,6 @@
 /* Begin PBXFileReference section */
 		79231A951CBD9E8200E1D566 /* CrackingMathematicsAndProbability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrackingMathematicsAndProbability.h; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingMathematicsAndProbability/CrackingMathematicsAndProbability.h; sourceTree = "<group>"; };
 		79231A961CBD9E8200E1D566 /* CrackingMathematicsAndProbability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingMathematicsAndProbability.m; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingMathematicsAndProbability/CrackingMathematicsAndProbability.m; sourceTree = "<group>"; };
-		79231A9A1CBDA35300E1D566 /* CrackingMathematicsAndProbabilityTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingMathematicsAndProbabilityTest.m; path = CrackingTheCodingInterviewTests/CrackingMathematicsAndProbabilityTest/CrackingMathematicsAndProbabilityTest.m; sourceTree = "<group>"; };
 		793D3D0B1CB3D5EC00CB16AB /* GraphNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphNode.h; sourceTree = "<group>"; };
 		793D3D0C1CB3D5EC00CB16AB /* GraphNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphNode.m; sourceTree = "<group>"; };
 		793D3D121CB7BF6A00CB16AB /* CrackingBitManipulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrackingBitManipulation.h; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingBitManipulation/CrackingBitManipulation.h; sourceTree = "<group>"; };
@@ -101,6 +101,7 @@
 		799CCE5D1CBFCE7A009CB3C6 /* HashTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HashTable.m; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingObjectOrientedDesign/HashTable/HashTable.m; sourceTree = "<group>"; };
 		799CCE601CBFD07A009CB3C6 /* HashTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HashTableCell.h; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingObjectOrientedDesign/HashTable/HashTableCell.h; sourceTree = "<group>"; };
 		799CCE611CBFD07A009CB3C6 /* HashTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HashTableCell.m; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingObjectOrientedDesign/HashTable/HashTableCell.m; sourceTree = "<group>"; };
+		799CCE641CC027C3009CB3C6 /* CrackingMathematicsAndProbabilityTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingMathematicsAndProbabilityTest.m; path = CrackingTheCodingInterviewTests/CrackingConceptsAndAlgorithmsTest/CrackingMathematicsAndProbabilityTest.m; sourceTree = "<group>"; };
 		79AF042F1CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixedSizeArrayThreesomeStack.h; sourceTree = "<group>"; };
 		79AF04301CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FixedSizeArrayThreesomeStack.m; sourceTree = "<group>"; };
 		79B3CB131CAD3E3B00D7DB97 /* StackWithMinimum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StackWithMinimum.h; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingStacksAndQueues/StackWithMinimum/StackWithMinimum.h; sourceTree = "<group>"; };
@@ -162,14 +163,6 @@
 			name = CrackingMathematicsAndProbability;
 			sourceTree = "<group>";
 		};
-		79231A991CBDA33200E1D566 /* CrackingMathematicsAndProbabilityTest */ = {
-			isa = PBXGroup;
-			children = (
-				79231A9A1CBDA35300E1D566 /* CrackingMathematicsAndProbabilityTest.m */,
-			);
-			name = CrackingMathematicsAndProbabilityTest;
-			sourceTree = "<group>";
-		};
 		793D3D0A1CB3D5EC00CB16AB /* GraphNode */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				793D3D171CB860CC00CB16AB /* CrackingBitManipulationTest.m */,
+				799CCE641CC027C3009CB3C6 /* CrackingMathematicsAndProbabilityTest.m */,
 			);
 			name = CrackingConceptsAndAlgorithmsTest;
 			sourceTree = "<group>";
@@ -459,7 +453,6 @@
 		79C5DC4C1CA2BAF1005DFD1B /* CrackingTheCodingInterviewTests */ = {
 			isa = PBXGroup;
 			children = (
-				79231A991CBDA33200E1D566 /* CrackingMathematicsAndProbabilityTest */,
 				793D3D161CB8606D00CB16AB /* CrackingConceptsAndAlgorithmsTest */,
 				79C5DC4D1CA2BB01005DFD1B /* CrackingDataStructuresTest */,
 			);
@@ -610,6 +603,7 @@
 				799CCE591CBFCB8B009CB3C6 /* CrackingObjectOrientedDesign.m in Sources */,
 				799CCE621CBFD07A009CB3C6 /* HashTableCell.m in Sources */,
 				79C5DC201CA2B8FC005DFD1B /* main.m in Sources */,
+				799CCE651CC027C3009CB3C6 /* CrackingMathematicsAndProbabilityTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,8 +617,8 @@
 				79689AFD1CA882B10078DCB7 /* LinkedListNode.m in Sources */,
 				793D3D0E1CB3D5EC00CB16AB /* GraphNode.m in Sources */,
 				79FC16BA1CB279AA004843CD /* BinaryTreeNode.m in Sources */,
+				799CCE661CC027C3009CB3C6 /* CrackingMathematicsAndProbabilityTest.m in Sources */,
 				7946C4761CAB166D001F0758 /* Stack.m in Sources */,
-				79231A9B1CBDA35300E1D566 /* CrackingMathematicsAndProbabilityTest.m in Sources */,
 				79B3CB201CADD2EE00D7DB97 /* MyQueue.m in Sources */,
 				79B3CB2E1CAE9C4300D7DB97 /* LinkedObjectListNode.m in Sources */,
 				79B3CB161CAD3E3B00D7DB97 /* StackWithMinimum.m in Sources */,
