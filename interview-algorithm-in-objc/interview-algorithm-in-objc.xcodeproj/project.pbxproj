@@ -28,6 +28,12 @@
 		79689AF81CA878CB0078DCB7 /* CrackingLinkedListsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79689AF71CA878CB0078DCB7 /* CrackingLinkedListsTest.m */; };
 		79689AFC1CA882B10078DCB7 /* LinkedListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79689AFB1CA882B10078DCB7 /* LinkedListNode.m */; };
 		79689AFD1CA882B10078DCB7 /* LinkedListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79689AFB1CA882B10078DCB7 /* LinkedListNode.m */; };
+		799CCE591CBFCB8B009CB3C6 /* CrackingObjectOrientedDesign.m in Sources */ = {isa = PBXBuildFile; fileRef = 799CCE581CBFCB8B009CB3C6 /* CrackingObjectOrientedDesign.m */; };
+		799CCE5A1CBFCB8B009CB3C6 /* CrackingObjectOrientedDesign.m in Sources */ = {isa = PBXBuildFile; fileRef = 799CCE581CBFCB8B009CB3C6 /* CrackingObjectOrientedDesign.m */; };
+		799CCE5E1CBFCE7A009CB3C6 /* HashTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 799CCE5D1CBFCE7A009CB3C6 /* HashTable.m */; };
+		799CCE5F1CBFCE7A009CB3C6 /* HashTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 799CCE5D1CBFCE7A009CB3C6 /* HashTable.m */; };
+		799CCE621CBFD07A009CB3C6 /* HashTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 799CCE611CBFD07A009CB3C6 /* HashTableCell.m */; };
+		799CCE631CBFD07A009CB3C6 /* HashTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 799CCE611CBFD07A009CB3C6 /* HashTableCell.m */; };
 		79AF04311CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AF04301CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m */; };
 		79AF04321CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AF04301CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m */; };
 		79B3CB151CAD3E3B00D7DB97 /* StackWithMinimum.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CB141CAD3E3B00D7DB97 /* StackWithMinimum.m */; };
@@ -89,6 +95,12 @@
 		79689AF71CA878CB0078DCB7 /* CrackingLinkedListsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingLinkedListsTest.m; path = CrackingTheCodingInterviewTests/CrackingDataStructuresTest/CrackingLinkedListsTest.m; sourceTree = "<group>"; };
 		79689AFA1CA882B10078DCB7 /* LinkedListNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinkedListNode.h; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingLinkedLists/LinkedListNode/LinkedListNode.h; sourceTree = "<group>"; };
 		79689AFB1CA882B10078DCB7 /* LinkedListNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinkedListNode.m; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingLinkedLists/LinkedListNode/LinkedListNode.m; sourceTree = "<group>"; };
+		799CCE571CBFCB8B009CB3C6 /* CrackingObjectOrientedDesign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrackingObjectOrientedDesign.h; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingObjectOrientedDesign/CrackingObjectOrientedDesign.h; sourceTree = "<group>"; };
+		799CCE581CBFCB8B009CB3C6 /* CrackingObjectOrientedDesign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingObjectOrientedDesign.m; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingObjectOrientedDesign/CrackingObjectOrientedDesign.m; sourceTree = "<group>"; };
+		799CCE5C1CBFCE7A009CB3C6 /* HashTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HashTable.h; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingObjectOrientedDesign/HashTable/HashTable.h; sourceTree = "<group>"; };
+		799CCE5D1CBFCE7A009CB3C6 /* HashTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HashTable.m; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingObjectOrientedDesign/HashTable/HashTable.m; sourceTree = "<group>"; };
+		799CCE601CBFD07A009CB3C6 /* HashTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HashTableCell.h; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingObjectOrientedDesign/HashTable/HashTableCell.h; sourceTree = "<group>"; };
+		799CCE611CBFD07A009CB3C6 /* HashTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HashTableCell.m; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingObjectOrientedDesign/HashTable/HashTableCell.m; sourceTree = "<group>"; };
 		79AF042F1CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixedSizeArrayThreesomeStack.h; sourceTree = "<group>"; };
 		79AF04301CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FixedSizeArrayThreesomeStack.m; sourceTree = "<group>"; };
 		79B3CB131CAD3E3B00D7DB97 /* StackWithMinimum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StackWithMinimum.h; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingStacksAndQueues/StackWithMinimum/StackWithMinimum.h; sourceTree = "<group>"; };
@@ -171,6 +183,7 @@
 		793D3D101CB7BE3800CB16AB /* CrackingConceptsAndAlgorithms */ = {
 			isa = PBXGroup;
 			children = (
+				799CCE561CBFCB56009CB3C6 /* CrackingObjectOrientedDesign */,
 				79231A941CBD9E3200E1D566 /* CrackingMathematicsAndProbability */,
 				793D3D111CB7BEA100CB16AB /* CrackingBitManipulation */,
 			);
@@ -256,6 +269,27 @@
 				79689AFB1CA882B10078DCB7 /* LinkedListNode.m */,
 			);
 			name = LInkedListNode;
+			sourceTree = "<group>";
+		};
+		799CCE561CBFCB56009CB3C6 /* CrackingObjectOrientedDesign */ = {
+			isa = PBXGroup;
+			children = (
+				799CCE571CBFCB8B009CB3C6 /* CrackingObjectOrientedDesign.h */,
+				799CCE581CBFCB8B009CB3C6 /* CrackingObjectOrientedDesign.m */,
+				799CCE5B1CBFCE0B009CB3C6 /* HashTable */,
+			);
+			name = CrackingObjectOrientedDesign;
+			sourceTree = "<group>";
+		};
+		799CCE5B1CBFCE0B009CB3C6 /* HashTable */ = {
+			isa = PBXGroup;
+			children = (
+				799CCE5C1CBFCE7A009CB3C6 /* HashTable.h */,
+				799CCE5D1CBFCE7A009CB3C6 /* HashTable.m */,
+				799CCE601CBFD07A009CB3C6 /* HashTableCell.h */,
+				799CCE611CBFD07A009CB3C6 /* HashTableCell.m */,
+			);
+			name = HashTable;
 			sourceTree = "<group>";
 		};
 		79AF042E1CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack */ = {
@@ -569,9 +603,12 @@
 				79AF04311CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m in Sources */,
 				79C5DC231CA2B8FC005DFD1B /* AppDelegate.m in Sources */,
 				79689AF11CA877D00078DCB7 /* CrackingArraysAndStrings.m in Sources */,
+				799CCE5E1CBFCE7A009CB3C6 /* HashTable.m in Sources */,
 				79B3CB281CAE952300D7DB97 /* Animal.m in Sources */,
 				79B3CB321CB0747C00D7DB97 /* CrackingTreesAndGraphs.m in Sources */,
 				7946C46D1CAB14ED001F0758 /* CrackingStacksAndQueues.m in Sources */,
+				799CCE591CBFCB8B009CB3C6 /* CrackingObjectOrientedDesign.m in Sources */,
+				799CCE621CBFD07A009CB3C6 /* HashTableCell.m in Sources */,
 				79C5DC201CA2B8FC005DFD1B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -592,16 +629,19 @@
 				79B3CB2E1CAE9C4300D7DB97 /* LinkedObjectListNode.m in Sources */,
 				79B3CB161CAD3E3B00D7DB97 /* StackWithMinimum.m in Sources */,
 				793D3D151CB7BF6A00CB16AB /* CrackingBitManipulation.m in Sources */,
+				799CCE631CBFD07A009CB3C6 /* HashTableCell.m in Sources */,
 				79689AF81CA878CB0078DCB7 /* CrackingLinkedListsTest.m in Sources */,
 				7946C4701CAB1524001F0758 /* CrackingStacksAndQueuesTest.m in Sources */,
 				79689AF61CA878AE0078DCB7 /* CrackingLinkedLists.m in Sources */,
 				79B3CB1B1CAD441B00D7DB97 /* SetOfStacks.m in Sources */,
 				79C5DC4F1CA2BB55005DFD1B /* CrackingArraysAndStringsTest.m in Sources */,
+				799CCE5F1CBFCE7A009CB3C6 /* HashTable.m in Sources */,
 				79231A981CBD9E8200E1D566 /* CrackingMathematicsAndProbability.m in Sources */,
 				79B3CB351CB0749A00D7DB97 /* CrackingTreesAndGraphsTest.m in Sources */,
 				79B3CB291CAE952300D7DB97 /* Animal.m in Sources */,
 				793D3D181CB860CC00CB16AB /* CrackingBitManipulationTest.m in Sources */,
 				7946C46E1CAB14ED001F0758 /* CrackingStacksAndQueues.m in Sources */,
+				799CCE5A1CBFCB8B009CB3C6 /* CrackingObjectOrientedDesign.m in Sources */,
 				7946C47B1CAB168C001F0758 /* Queue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
