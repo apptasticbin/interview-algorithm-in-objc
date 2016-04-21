@@ -62,6 +62,7 @@
 		79C5DC2B1CA2B8FC005DFD1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79C5DC2A1CA2B8FC005DFD1B /* Assets.xcassets */; };
 		79C5DC2E1CA2B8FC005DFD1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79C5DC2C1CA2B8FC005DFD1B /* LaunchScreen.storyboard */; };
 		79C5DC4F1CA2BB55005DFD1B /* CrackingArraysAndStringsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C5DC4E1CA2BB55005DFD1B /* CrackingArraysAndStringsTest.m */; };
+		79D342161CC82AB300D65BCD /* CrackingSortingAndSearchingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D342151CC82AB300D65BCD /* CrackingSortingAndSearchingTest.m */; };
 		79D81B251CC046D20080B773 /* CrackingMathematicsAndProbabilityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D81B241CC046D20080B773 /* CrackingMathematicsAndProbabilityTest.m */; };
 		79DDA8071CC822730085E61A /* CrackingSortingAndSearching.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA8061CC822730085E61A /* CrackingSortingAndSearching.m */; };
 		79DDA8081CC822730085E61A /* CrackingSortingAndSearching.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA8061CC822730085E61A /* CrackingSortingAndSearching.m */; };
@@ -143,6 +144,7 @@
 		79C5DC341CA2B8FC005DFD1B /* interview-algorithm-in-objcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "interview-algorithm-in-objcTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C5DC3A1CA2B8FC005DFD1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79C5DC4E1CA2BB55005DFD1B /* CrackingArraysAndStringsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingArraysAndStringsTest.m; path = CrackingTheCodingInterviewTests/CrackingDataStructuresTest/CrackingArraysAndStringsTest.m; sourceTree = "<group>"; };
+		79D342151CC82AB300D65BCD /* CrackingSortingAndSearchingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingSortingAndSearchingTest.m; path = CrackingTheCodingInterviewTests/CrackingConceptsAndAlgorithmsTest/CrackingSortingAndSearchingTest.m; sourceTree = "<group>"; };
 		79D81B241CC046D20080B773 /* CrackingMathematicsAndProbabilityTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingMathematicsAndProbabilityTest.m; path = CrackingTheCodingInterviewTests/CrackingConceptsAndAlgorithmsTest/CrackingMathematicsAndProbabilityTest.m; sourceTree = "<group>"; };
 		79DDA8051CC822730085E61A /* CrackingSortingAndSearching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrackingSortingAndSearching.h; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingSortingAndSearching/CrackingSortingAndSearching.h; sourceTree = "<group>"; };
 		79DDA8061CC822730085E61A /* CrackingSortingAndSearching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingSortingAndSearching.m; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingSortingAndSearching/CrackingSortingAndSearching.m; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				793D3D171CB860CC00CB16AB /* CrackingBitManipulationTest.m */,
 				79D81B241CC046D20080B773 /* CrackingMathematicsAndProbabilityTest.m */,
 				799CCE6C1CC045AF009CB3C6 /* CrackingRecursionAndDPTest.m */,
+				79D342151CC82AB300D65BCD /* CrackingSortingAndSearchingTest.m */,
 			);
 			name = CrackingConceptsAndAlgorithmsTest;
 			sourceTree = "<group>";
@@ -678,6 +681,7 @@
 				799CCE631CBFD07A009CB3C6 /* HashTableCell.m in Sources */,
 				799CCE6D1CC045AF009CB3C6 /* CrackingRecursionAndDPTest.m in Sources */,
 				79689AF81CA878CB0078DCB7 /* CrackingLinkedListsTest.m in Sources */,
+				79D342161CC82AB300D65BCD /* CrackingSortingAndSearchingTest.m in Sources */,
 				7946C4701CAB1524001F0758 /* CrackingStacksAndQueuesTest.m in Sources */,
 				79689AF61CA878AE0078DCB7 /* CrackingLinkedLists.m in Sources */,
 				79B3CB1B1CAD441B00D7DB97 /* SetOfStacks.m in Sources */,

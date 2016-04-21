@@ -10,4 +10,11 @@
 
 @interface CrackingSortingAndSearching : NSObject
 
++ (void)bubbleSort:(NSMutableArray *)integers;
++ (void)selectionSort:(NSMutableArray *)integers;
++ (void)mergeSort:(NSMutableArray *)integers;
++ (void)quickSort:(NSMutableArray *)integers;
++ (void)radixSort:(NSMutableArray *)integers;
++ (NSInteger)binarySearch:(NSArray *)integers value:(NSInteger)value;
+
 @end
