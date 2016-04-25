@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CrackingResursionAndDP.h"
+#import "CrackingRecursionAndDP.h"
 #import "Matrix.h"
 
-@implementation CrackingResursionAndDP
+@implementation CrackingRecursionAndDP
 
 /**
  A child is running up a staircase with n steps, and can hop either 1 step, 2 steps, or 3 steps at a time. 

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CrackingResursionAndDP : NSObject
+@interface CrackingRecursionAndDP : NSObject
 
 + (NSInteger)possibleWaysToRunUpStaircase:(NSInteger)steps;
 + (NSInteger)possiblePathsInGridBoard:(NSInteger)x y:(NSInteger)y;

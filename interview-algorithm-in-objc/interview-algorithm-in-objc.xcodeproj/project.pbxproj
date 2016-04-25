@@ -35,8 +35,8 @@
 		799CCE5F1CBFCE7A009CB3C6 /* HashTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 799CCE5D1CBFCE7A009CB3C6 /* HashTable.m */; };
 		799CCE621CBFD07A009CB3C6 /* HashTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 799CCE611CBFD07A009CB3C6 /* HashTableCell.m */; };
 		799CCE631CBFD07A009CB3C6 /* HashTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 799CCE611CBFD07A009CB3C6 /* HashTableCell.m */; };
-		799CCE6A1CC02B29009CB3C6 /* CrackingResursionAndDP.m in Sources */ = {isa = PBXBuildFile; fileRef = 799CCE691CC02B29009CB3C6 /* CrackingResursionAndDP.m */; };
-		799CCE6B1CC02B29009CB3C6 /* CrackingResursionAndDP.m in Sources */ = {isa = PBXBuildFile; fileRef = 799CCE691CC02B29009CB3C6 /* CrackingResursionAndDP.m */; };
+		799CCE6A1CC02B29009CB3C6 /* CrackingRecursionAndDP.m in Sources */ = {isa = PBXBuildFile; fileRef = 799CCE691CC02B29009CB3C6 /* CrackingRecursionAndDP.m */; };
+		799CCE6B1CC02B29009CB3C6 /* CrackingRecursionAndDP.m in Sources */ = {isa = PBXBuildFile; fileRef = 799CCE691CC02B29009CB3C6 /* CrackingRecursionAndDP.m */; };
 		799CCE6D1CC045AF009CB3C6 /* CrackingRecursionAndDPTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 799CCE6C1CC045AF009CB3C6 /* CrackingRecursionAndDPTest.m */; };
 		79AF04311CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AF04301CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m */; };
 		79AF04321CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AF04301CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m */; };
@@ -55,6 +55,10 @@
 		79B3CB321CB0747C00D7DB97 /* CrackingTreesAndGraphs.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CB311CB0747C00D7DB97 /* CrackingTreesAndGraphs.m */; };
 		79B3CB331CB0747C00D7DB97 /* CrackingTreesAndGraphs.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CB311CB0747C00D7DB97 /* CrackingTreesAndGraphs.m */; };
 		79B3CB351CB0749A00D7DB97 /* CrackingTreesAndGraphsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CB341CB0749A00D7DB97 /* CrackingTreesAndGraphsTest.m */; };
+		79B95E771CCE36FC00D171D9 /* RankingNumbers.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B95E761CCE36FC00D171D9 /* RankingNumbers.m */; };
+		79B95E781CCE36FC00D171D9 /* RankingNumbers.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B95E761CCE36FC00D171D9 /* RankingNumbers.m */; };
+		79B95E7C1CCE590E00D171D9 /* BinarySearchTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B95E7B1CCE590E00D171D9 /* BinarySearchTreeNode.m */; };
+		79B95E7D1CCE590E00D171D9 /* BinarySearchTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B95E7B1CCE590E00D171D9 /* BinarySearchTreeNode.m */; };
 		79C5DC201CA2B8FC005DFD1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C5DC1F1CA2B8FC005DFD1B /* main.m */; };
 		79C5DC231CA2B8FC005DFD1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C5DC221CA2B8FC005DFD1B /* AppDelegate.m */; };
 		79C5DC261CA2B8FC005DFD1B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C5DC251CA2B8FC005DFD1B /* ViewController.m */; };
@@ -111,8 +115,8 @@
 		799CCE5D1CBFCE7A009CB3C6 /* HashTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HashTable.m; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingObjectOrientedDesign/HashTable/HashTable.m; sourceTree = "<group>"; };
 		799CCE601CBFD07A009CB3C6 /* HashTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HashTableCell.h; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingObjectOrientedDesign/HashTable/HashTableCell.h; sourceTree = "<group>"; };
 		799CCE611CBFD07A009CB3C6 /* HashTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HashTableCell.m; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingObjectOrientedDesign/HashTable/HashTableCell.m; sourceTree = "<group>"; };
-		799CCE681CC02B29009CB3C6 /* CrackingResursionAndDP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrackingResursionAndDP.h; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingRecursionAndDP/CrackingResursionAndDP.h; sourceTree = "<group>"; };
-		799CCE691CC02B29009CB3C6 /* CrackingResursionAndDP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingResursionAndDP.m; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingRecursionAndDP/CrackingResursionAndDP.m; sourceTree = "<group>"; };
+		799CCE681CC02B29009CB3C6 /* CrackingRecursionAndDP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrackingRecursionAndDP.h; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingRecursionAndDP/CrackingRecursionAndDP.h; sourceTree = "<group>"; };
+		799CCE691CC02B29009CB3C6 /* CrackingRecursionAndDP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingRecursionAndDP.m; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingRecursionAndDP/CrackingRecursionAndDP.m; sourceTree = "<group>"; };
 		799CCE6C1CC045AF009CB3C6 /* CrackingRecursionAndDPTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingRecursionAndDPTest.m; path = CrackingTheCodingInterviewTests/CrackingConceptsAndAlgorithmsTest/CrackingRecursionAndDPTest.m; sourceTree = "<group>"; };
 		79AF042F1CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixedSizeArrayThreesomeStack.h; sourceTree = "<group>"; };
 		79AF04301CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FixedSizeArrayThreesomeStack.m; sourceTree = "<group>"; };
@@ -131,6 +135,10 @@
 		79B3CB301CB0747C00D7DB97 /* CrackingTreesAndGraphs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrackingTreesAndGraphs.h; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingTreesAndGraphs/CrackingTreesAndGraphs.h; sourceTree = "<group>"; };
 		79B3CB311CB0747C00D7DB97 /* CrackingTreesAndGraphs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingTreesAndGraphs.m; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingTreesAndGraphs/CrackingTreesAndGraphs.m; sourceTree = "<group>"; };
 		79B3CB341CB0749A00D7DB97 /* CrackingTreesAndGraphsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingTreesAndGraphsTest.m; path = CrackingTheCodingInterviewTests/CrackingDataStructuresTest/CrackingTreesAndGraphsTest.m; sourceTree = "<group>"; };
+		79B95E751CCE36FC00D171D9 /* RankingNumbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RankingNumbers.h; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingSortingAndSearching/RankingNumbers/RankingNumbers.h; sourceTree = "<group>"; };
+		79B95E761CCE36FC00D171D9 /* RankingNumbers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RankingNumbers.m; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingSortingAndSearching/RankingNumbers/RankingNumbers.m; sourceTree = "<group>"; };
+		79B95E7A1CCE590E00D171D9 /* BinarySearchTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinarySearchTreeNode.h; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingSortingAndSearching/BinarySearchTreeNode/BinarySearchTreeNode.h; sourceTree = "<group>"; };
+		79B95E7B1CCE590E00D171D9 /* BinarySearchTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BinarySearchTreeNode.m; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingSortingAndSearching/BinarySearchTreeNode/BinarySearchTreeNode.m; sourceTree = "<group>"; };
 		79C5DC1B1CA2B8FC005DFD1B /* interview-algorithm-in-objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "interview-algorithm-in-objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C5DC1F1CA2B8FC005DFD1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		79C5DC211CA2B8FC005DFD1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -320,8 +328,8 @@
 		799CCE671CC02801009CB3C6 /* CrackingRecursionAndDP */ = {
 			isa = PBXGroup;
 			children = (
-				799CCE681CC02B29009CB3C6 /* CrackingResursionAndDP.h */,
-				799CCE691CC02B29009CB3C6 /* CrackingResursionAndDP.m */,
+				799CCE681CC02B29009CB3C6 /* CrackingRecursionAndDP.h */,
+				799CCE691CC02B29009CB3C6 /* CrackingRecursionAndDP.m */,
 				79683B271CC4F5BA002887CE /* Matrix */,
 			);
 			name = CrackingRecursionAndDP;
@@ -393,6 +401,24 @@
 				793D3D0A1CB3D5EC00CB16AB /* GraphNode */,
 			);
 			name = CrackingTreesAndGraphs;
+			sourceTree = "<group>";
+		};
+		79B95E741CCE35B600D171D9 /* RankingNumbers */ = {
+			isa = PBXGroup;
+			children = (
+				79B95E751CCE36FC00D171D9 /* RankingNumbers.h */,
+				79B95E761CCE36FC00D171D9 /* RankingNumbers.m */,
+			);
+			name = RankingNumbers;
+			sourceTree = "<group>";
+		};
+		79B95E791CCE58D300D171D9 /* BinarySearchTreeNode */ = {
+			isa = PBXGroup;
+			children = (
+				79B95E7A1CCE590E00D171D9 /* BinarySearchTreeNode.h */,
+				79B95E7B1CCE590E00D171D9 /* BinarySearchTreeNode.m */,
+			);
+			name = BinarySearchTreeNode;
 			sourceTree = "<group>";
 		};
 		79C5DC121CA2B8FC005DFD1B = {
@@ -517,6 +543,8 @@
 			children = (
 				79DDA8051CC822730085E61A /* CrackingSortingAndSearching.h */,
 				79DDA8061CC822730085E61A /* CrackingSortingAndSearching.m */,
+				79B95E791CCE58D300D171D9 /* BinarySearchTreeNode */,
+				79B95E741CCE35B600D171D9 /* RankingNumbers */,
 			);
 			name = CrackingSortingAndSearching;
 			sourceTree = "<group>";
@@ -643,6 +671,7 @@
 				79B3CB1A1CAD441B00D7DB97 /* SetOfStacks.m in Sources */,
 				79C5DC261CA2B8FC005DFD1B /* ViewController.m in Sources */,
 				79B3CB151CAD3E3B00D7DB97 /* StackWithMinimum.m in Sources */,
+				79B95E7C1CCE590E00D171D9 /* BinarySearchTreeNode.m in Sources */,
 				793D3D141CB7BF6A00CB16AB /* CrackingBitManipulation.m in Sources */,
 				7946C47A1CAB168C001F0758 /* Queue.m in Sources */,
 				79689AFC1CA882B10078DCB7 /* LinkedListNode.m in Sources */,
@@ -655,8 +684,9 @@
 				7946C46D1CAB14ED001F0758 /* CrackingStacksAndQueues.m in Sources */,
 				799CCE591CBFCB8B009CB3C6 /* CrackingObjectOrientedDesign.m in Sources */,
 				799CCE621CBFD07A009CB3C6 /* HashTableCell.m in Sources */,
+				79B95E771CCE36FC00D171D9 /* RankingNumbers.m in Sources */,
 				79C5DC201CA2B8FC005DFD1B /* main.m in Sources */,
-				799CCE6A1CC02B29009CB3C6 /* CrackingResursionAndDP.m in Sources */,
+				799CCE6A1CC02B29009CB3C6 /* CrackingRecursionAndDP.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,7 +700,7 @@
 				79689AFD1CA882B10078DCB7 /* LinkedListNode.m in Sources */,
 				793D3D0E1CB3D5EC00CB16AB /* GraphNode.m in Sources */,
 				79FC16BA1CB279AA004843CD /* BinaryTreeNode.m in Sources */,
-				799CCE6B1CC02B29009CB3C6 /* CrackingResursionAndDP.m in Sources */,
+				799CCE6B1CC02B29009CB3C6 /* CrackingRecursionAndDP.m in Sources */,
 				7946C4761CAB166D001F0758 /* Stack.m in Sources */,
 				79D81B251CC046D20080B773 /* CrackingMathematicsAndProbabilityTest.m in Sources */,
 				79B3CB201CADD2EE00D7DB97 /* MyQueue.m in Sources */,
@@ -681,8 +711,10 @@
 				799CCE631CBFD07A009CB3C6 /* HashTableCell.m in Sources */,
 				799CCE6D1CC045AF009CB3C6 /* CrackingRecursionAndDPTest.m in Sources */,
 				79689AF81CA878CB0078DCB7 /* CrackingLinkedListsTest.m in Sources */,
+				79B95E781CCE36FC00D171D9 /* RankingNumbers.m in Sources */,
 				79D342161CC82AB300D65BCD /* CrackingSortingAndSearchingTest.m in Sources */,
 				7946C4701CAB1524001F0758 /* CrackingStacksAndQueuesTest.m in Sources */,
+				79B95E7D1CCE590E00D171D9 /* BinarySearchTreeNode.m in Sources */,
 				79689AF61CA878AE0078DCB7 /* CrackingLinkedLists.m in Sources */,
 				79B3CB1B1CAD441B00D7DB97 /* SetOfStacks.m in Sources */,
 				79C5DC4F1CA2BB55005DFD1B /* CrackingArraysAndStringsTest.m in Sources */,

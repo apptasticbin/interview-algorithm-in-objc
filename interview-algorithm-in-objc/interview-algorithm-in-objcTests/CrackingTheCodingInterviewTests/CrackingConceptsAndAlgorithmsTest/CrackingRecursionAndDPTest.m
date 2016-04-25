@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "CrackingResursionAndDP.h"
+#import "CrackingRecursionAndDP.h"
 #import "Matrix.h"
 
 @interface CrackingRecursionAndDPTest : XCTestCase
@@ -56,16 +56,16 @@
 - (void)testPossibleWaysToRunUpStaircase {
     NSUInteger steps = 3;
     NSUInteger expectResult = 4;
-    NSUInteger actualResult = [CrackingResursionAndDP possibleWaysToRunUpStaircase:steps];
+    NSUInteger actualResult = [CrackingRecursionAndDP possibleWaysToRunUpStaircase:steps];
     XCTAssertEqual(actualResult, expectResult);
     
     steps = 4;
     expectResult = 7;
-    actualResult = [CrackingResursionAndDP possibleWaysToRunUpStaircase:steps];
+    actualResult = [CrackingRecursionAndDP possibleWaysToRunUpStaircase:steps];
     XCTAssertEqual(actualResult, expectResult);
     
     steps = 30;
-    actualResult = [CrackingResursionAndDP possibleWaysToRunUpStaircase:steps];
+    actualResult = [CrackingRecursionAndDP possibleWaysToRunUpStaircase:steps];
     NSLog(@"possible ways of %lu steps: %ld", (unsigned long)steps, (long)actualResult);
 }
 
@@ -73,13 +73,13 @@
     NSInteger testX = 2;
     NSInteger testY = 2;
     NSInteger expectResult = [self actualPossibleStepsForGrid:testX y:testY];
-    NSInteger actualResult = [CrackingResursionAndDP possiblePathsInGridBoard:testX y:testY];
+    NSInteger actualResult = [CrackingRecursionAndDP possiblePathsInGridBoard:testX y:testY];
     XCTAssertEqual(expectResult, actualResult);
     
     testX = 5;
     testY = 10;
     expectResult = [self actualPossibleStepsForGrid:testX y:testY];
-    actualResult = [CrackingResursionAndDP possiblePathsInGridBoard:testX y:testY];
+    actualResult = [CrackingRecursionAndDP possiblePathsInGridBoard:testX y:testY];
     XCTAssertEqual(expectResult, actualResult);
     
     testX = 4;
@@ -87,7 +87,7 @@
     NSArray *testBlockSpots = [NSArray array];
     NSMutableArray *actualPath = [NSMutableArray array];
     
-    [CrackingResursionAndDP pathFromTopLeftToBottomRightInGridBoard:testX y:testY
+    [CrackingRecursionAndDP pathFromTopLeftToBottomRightInGridBoard:testX y:testY
                                                                path:actualPath
                                                          blockSpots:testBlockSpots];
     NSLog(@"%@", actualPath);
@@ -96,19 +96,19 @@
 - (void)testFindMagicIndexIfExistsInSortedArray {
     NSArray *testSortedArray = @[@(-2), @(-1), @(0), @(3), @(5), @(7)];
     NSInteger expectResult = 3;
-    NSInteger actualResult = [CrackingResursionAndDP findMagicIndexIfExistsInSortedArray:testSortedArray];
+    NSInteger actualResult = [CrackingRecursionAndDP findMagicIndexIfExistsInSortedArray:testSortedArray];
     XCTAssertEqual(expectResult, actualResult);
     
     testSortedArray = @[@(-2), @(-1), @(0), @(4), @(5), @(7)];
     expectResult = -1;
-    actualResult = [CrackingResursionAndDP findMagicIndexIfExistsInSortedArray:testSortedArray];
+    actualResult = [CrackingRecursionAndDP findMagicIndexIfExistsInSortedArray:testSortedArray];
     XCTAssertEqual(expectResult, actualResult);
 }
 
 - (void)testFindAllSubsetsOfSet {
     NSArray *testSetArray = @[@(1), @(2), @(3), @(4)];
     NSMutableSet *testSet = [NSMutableSet setWithArray:testSetArray];
-    NSArray *actualResultArray = [CrackingResursionAndDP findAllSubsetsOfSet:testSet];
+    NSArray *actualResultArray = [CrackingRecursionAndDP findAllSubsetsOfSet:testSet];
     NSArray *expectResultArray = @[
                                    @[],
                                    @[@(1)],
@@ -135,7 +135,7 @@
 
 - (void)testAllPermutationsOfString {
     NSString *testString = @"abcdef";
-    NSArray *actualResult = [CrackingResursionAndDP allPermutationsOfString:testString];
+    NSArray *actualResult = [CrackingRecursionAndDP allPermutationsOfString:testString];
     NSUInteger expectResultCount = [self factorial:testString.length];
     XCTAssertEqual(expectResultCount, actualResult.count);
     
@@ -145,7 +145,7 @@
 
 - (void)testPairsOfParentheseCombinations {
     NSInteger testPairAmount = 3;
-    NSArray *actualResult = [CrackingResursionAndDP nPairsOfParentheseCombinations:testPairAmount];
+    NSArray *actualResult = [CrackingRecursionAndDP nPairsOfParentheseCombinations:testPairAmount];
     XCTAssertEqual(actualResult.count, 5);
     NSLog(@"%@", actualResult);
 }
@@ -170,29 +170,29 @@
                        @[[UIColor redColor], [UIColor redColor], [UIColor redColor], [UIColor redColor], [UIColor redColor]],
                        ];
     CGPoint testPaintPoint = CGPointMake(1, 1);
-    [CrackingResursionAndDP paintFillColor:[UIColor blueColor] atPoint:testPaintPoint onScreen:testScreen];
+    [CrackingRecursionAndDP paintFillColor:[UIColor blueColor] atPoint:testPaintPoint onScreen:testScreen];
     XCTAssertEqualObjects(testScreen, resultScreen);
 }
 
 - (void)testNumberOfWaysToRepresentNCents {
     NSInteger testCents = 10;
     NSInteger expectRepresentingWays = 4;
-    NSInteger actualRepresentingWays = [CrackingResursionAndDP numberOfWaysToRepresentNCents:testCents];
+    NSInteger actualRepresentingWays = [CrackingRecursionAndDP numberOfWaysToRepresentNCents:testCents];
     XCTAssertEqual(expectRepresentingWays, actualRepresentingWays);
     
     testCents = 15;
     expectRepresentingWays = 6;
-    actualRepresentingWays = [CrackingResursionAndDP numberOfWaysToRepresentNCents:testCents];
+    actualRepresentingWays = [CrackingRecursionAndDP numberOfWaysToRepresentNCents:testCents];
     XCTAssertEqual(expectRepresentingWays, actualRepresentingWays);
     
     for (NSInteger i=20; i<100; i += 3) {
-        XCTAssertEqual([CrackingResursionAndDP numberOfWaysToRepresentNCents:i],
-                       [CrackingResursionAndDP betterNumberOfWaysToRepresentNCents:i denom:25]);
+        XCTAssertEqual([CrackingRecursionAndDP numberOfWaysToRepresentNCents:i],
+                       [CrackingRecursionAndDP betterNumberOfWaysToRepresentNCents:i denom:25]);
     }
 }
 
 - (void)testQueenCombinationOn8X8ChessBoard {
-    NSArray *results = [CrackingResursionAndDP queenCombinationOn8X8ChessBoard];
+    NSArray *results = [CrackingRecursionAndDP queenCombinationOn8X8ChessBoard];
     for (NSUInteger i=0; i<results.count; i++) {
         NSLog(@"%@", results[i]);
     }
@@ -202,7 +202,7 @@
     NSString *testExpresion = @"1^0|0|1";
     BOOL testDesiredResult = NO;
     NSUInteger expectResult = 2;
-    NSUInteger actualResult = [CrackingResursionAndDP parenthesizingWaysOf:testExpresion desiredResult:testDesiredResult];
+    NSUInteger actualResult = [CrackingRecursionAndDP parenthesizingWaysOf:testExpresion desiredResult:testDesiredResult];
     XCTAssertEqual(expectResult, actualResult);
     
     /**
