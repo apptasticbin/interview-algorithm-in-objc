@@ -71,6 +71,10 @@
 		79DDA8071CC822730085E61A /* CrackingSortingAndSearching.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA8061CC822730085E61A /* CrackingSortingAndSearching.m */; };
 		79DDA8081CC822730085E61A /* CrackingSortingAndSearching.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA8061CC822730085E61A /* CrackingSortingAndSearching.m */; };
 		79DFF78F1CC10C5B00AD3C48 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79DFF78E1CC10C5B00AD3C48 /* UIKit.framework */; };
+		79F9A41D1CD0154F002EE9EC /* MyCppClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A41B1CD0154F002EE9EC /* MyCppClass.cpp */; };
+		79F9A41E1CD0154F002EE9EC /* MyCppClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A41B1CD0154F002EE9EC /* MyCppClass.cpp */; };
+		79F9A4221CD0157A002EE9EC /* MySmartPointer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A4201CD0157A002EE9EC /* MySmartPointer.cpp */; };
+		79F9A4231CD0157A002EE9EC /* MySmartPointer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A4201CD0157A002EE9EC /* MySmartPointer.cpp */; };
 		79FC16B91CB279AA004843CD /* BinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FC16B81CB279AA004843CD /* BinaryTreeNode.m */; };
 		79FC16BA1CB279AA004843CD /* BinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FC16B81CB279AA004843CD /* BinaryTreeNode.m */; };
 /* End PBXBuildFile section */
@@ -157,6 +161,10 @@
 		79DDA8051CC822730085E61A /* CrackingSortingAndSearching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrackingSortingAndSearching.h; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingSortingAndSearching/CrackingSortingAndSearching.h; sourceTree = "<group>"; };
 		79DDA8061CC822730085E61A /* CrackingSortingAndSearching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingSortingAndSearching.m; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingSortingAndSearching/CrackingSortingAndSearching.m; sourceTree = "<group>"; };
 		79DFF78E1CC10C5B00AD3C48 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		79F9A41B1CD0154F002EE9EC /* MyCppClass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyCppClass.cpp; sourceTree = "<group>"; };
+		79F9A41C1CD0154F002EE9EC /* MyCppClass.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MyCppClass.hpp; sourceTree = "<group>"; };
+		79F9A4201CD0157A002EE9EC /* MySmartPointer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MySmartPointer.cpp; path = "Algorithms/CrackingTheCodingInterview/KnowledgeBased/C&C++/MySmartPointer/MySmartPointer.cpp"; sourceTree = "<group>"; };
+		79F9A4211CD0157A002EE9EC /* MySmartPointer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MySmartPointer.hpp; path = "Algorithms/CrackingTheCodingInterview/KnowledgeBased/C&C++/MySmartPointer/MySmartPointer.hpp"; sourceTree = "<group>"; };
 		79FC16B71CB279AA004843CD /* BinaryTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinaryTreeNode.h; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingTreesAndGraphs/BinaryTreeNode/BinaryTreeNode.h; sourceTree = "<group>"; };
 		79FC16B81CB279AA004843CD /* BinaryTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BinaryTreeNode.m; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingTreesAndGraphs/BinaryTreeNode/BinaryTreeNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -501,6 +509,7 @@
 		79C5DC461CA2B968005DFD1B /* CrackingTheCodingInterview */ = {
 			isa = PBXGroup;
 			children = (
+				79F9A40E1CCFEC60002EE9EC /* KnowledgeBased */,
 				793D3D101CB7BE3800CB16AB /* CrackingConceptsAndAlgorithms */,
 				79C5DC471CA2B9AD005DFD1B /* CrackingDataStructures */,
 			);
@@ -547,6 +556,42 @@
 				79B95E741CCE35B600D171D9 /* RankingNumbers */,
 			);
 			name = CrackingSortingAndSearching;
+			sourceTree = "<group>";
+		};
+		79F9A40E1CCFEC60002EE9EC /* KnowledgeBased */ = {
+			isa = PBXGroup;
+			children = (
+				79F9A40F1CCFECAD002EE9EC /* C&C++ */,
+			);
+			name = KnowledgeBased;
+			sourceTree = "<group>";
+		};
+		79F9A40F1CCFECAD002EE9EC /* C&C++ */ = {
+			isa = PBXGroup;
+			children = (
+				79F9A41A1CD0154F002EE9EC /* MyCppClass */,
+				79F9A41F1CD01557002EE9EC /* MySmartPointer */,
+			);
+			name = "C&C++";
+			sourceTree = "<group>";
+		};
+		79F9A41A1CD0154F002EE9EC /* MyCppClass */ = {
+			isa = PBXGroup;
+			children = (
+				79F9A41C1CD0154F002EE9EC /* MyCppClass.hpp */,
+				79F9A41B1CD0154F002EE9EC /* MyCppClass.cpp */,
+			);
+			name = MyCppClass;
+			path = "Algorithms/CrackingTheCodingInterview/KnowledgeBased/C&C++/MyCppClass";
+			sourceTree = "<group>";
+		};
+		79F9A41F1CD01557002EE9EC /* MySmartPointer */ = {
+			isa = PBXGroup;
+			children = (
+				79F9A4211CD0157A002EE9EC /* MySmartPointer.hpp */,
+				79F9A4201CD0157A002EE9EC /* MySmartPointer.cpp */,
+			);
+			name = MySmartPointer;
 			sourceTree = "<group>";
 		};
 		79FC16B61CB27777004843CD /* BinaryTreeNode */ = {
@@ -662,6 +707,7 @@
 				79B3CB2D1CAE9C4300D7DB97 /* LinkedObjectListNode.m in Sources */,
 				79683B2A1CC4F5DB002887CE /* Matrix.m in Sources */,
 				79B3CB241CAE94FC00D7DB97 /* AnimalShelter.m in Sources */,
+				79F9A41D1CD0154F002EE9EC /* MyCppClass.cpp in Sources */,
 				79B3CB1F1CADD2EE00D7DB97 /* MyQueue.m in Sources */,
 				793D3D0D1CB3D5EC00CB16AB /* GraphNode.m in Sources */,
 				79231A971CBD9E8200E1D566 /* CrackingMathematicsAndProbability.m in Sources */,
@@ -672,6 +718,7 @@
 				79C5DC261CA2B8FC005DFD1B /* ViewController.m in Sources */,
 				79B3CB151CAD3E3B00D7DB97 /* StackWithMinimum.m in Sources */,
 				79B95E7C1CCE590E00D171D9 /* BinarySearchTreeNode.m in Sources */,
+				79F9A4221CD0157A002EE9EC /* MySmartPointer.cpp in Sources */,
 				793D3D141CB7BF6A00CB16AB /* CrackingBitManipulation.m in Sources */,
 				7946C47A1CAB168C001F0758 /* Queue.m in Sources */,
 				79689AFC1CA882B10078DCB7 /* LinkedListNode.m in Sources */,
@@ -694,6 +741,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79F9A41E1CD0154F002EE9EC /* MyCppClass.cpp in Sources */,
 				79B3CB331CB0747C00D7DB97 /* CrackingTreesAndGraphs.m in Sources */,
 				79B3CB251CAE94FC00D7DB97 /* AnimalShelter.m in Sources */,
 				79AF04321CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m in Sources */,
@@ -723,6 +771,7 @@
 				79DDA8081CC822730085E61A /* CrackingSortingAndSearching.m in Sources */,
 				79B3CB351CB0749A00D7DB97 /* CrackingTreesAndGraphsTest.m in Sources */,
 				79B3CB291CAE952300D7DB97 /* Animal.m in Sources */,
+				79F9A4231CD0157A002EE9EC /* MySmartPointer.cpp in Sources */,
 				793D3D181CB860CC00CB16AB /* CrackingBitManipulationTest.m in Sources */,
 				7946C46E1CAB14ED001F0758 /* CrackingStacksAndQueues.m in Sources */,
 				799CCE5A1CBFCB8B009CB3C6 /* CrackingObjectOrientedDesign.m in Sources */,
