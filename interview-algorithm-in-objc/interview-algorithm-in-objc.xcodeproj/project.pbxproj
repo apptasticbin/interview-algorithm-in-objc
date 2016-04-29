@@ -75,6 +75,12 @@
 		79F9A41E1CD0154F002EE9EC /* MyCppClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A41B1CD0154F002EE9EC /* MyCppClass.cpp */; };
 		79F9A4221CD0157A002EE9EC /* MySmartPointer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A4201CD0157A002EE9EC /* MySmartPointer.cpp */; };
 		79F9A4231CD0157A002EE9EC /* MySmartPointer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A4201CD0157A002EE9EC /* MySmartPointer.cpp */; };
+		79F9A6821CD15B11002EE9EC /* Chopstick.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A6811CD15B11002EE9EC /* Chopstick.m */; };
+		79F9A6831CD15B11002EE9EC /* Chopstick.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A6811CD15B11002EE9EC /* Chopstick.m */; };
+		79F9A6861CD15B2E002EE9EC /* Philosopher.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A6851CD15B2E002EE9EC /* Philosopher.m */; };
+		79F9A6871CD15B2E002EE9EC /* Philosopher.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A6851CD15B2E002EE9EC /* Philosopher.m */; };
+		79F9A68B1CD382AD002EE9EC /* OrderExecuteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A68A1CD382AD002EE9EC /* OrderExecuteObject.m */; };
+		79F9A68C1CD382AD002EE9EC /* OrderExecuteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A68A1CD382AD002EE9EC /* OrderExecuteObject.m */; };
 		79FC16B91CB279AA004843CD /* BinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FC16B81CB279AA004843CD /* BinaryTreeNode.m */; };
 		79FC16BA1CB279AA004843CD /* BinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FC16B81CB279AA004843CD /* BinaryTreeNode.m */; };
 /* End PBXBuildFile section */
@@ -165,6 +171,12 @@
 		79F9A41C1CD0154F002EE9EC /* MyCppClass.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MyCppClass.hpp; sourceTree = "<group>"; };
 		79F9A4201CD0157A002EE9EC /* MySmartPointer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MySmartPointer.cpp; path = "Algorithms/CrackingTheCodingInterview/KnowledgeBased/C&C++/MySmartPointer/MySmartPointer.cpp"; sourceTree = "<group>"; };
 		79F9A4211CD0157A002EE9EC /* MySmartPointer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MySmartPointer.hpp; path = "Algorithms/CrackingTheCodingInterview/KnowledgeBased/C&C++/MySmartPointer/MySmartPointer.hpp"; sourceTree = "<group>"; };
+		79F9A6801CD15B11002EE9EC /* Chopstick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Chopstick.h; path = Algorithms/CrackingTheCodingInterview/KnowledgeBased/ThreadsAndLocks/DiningPhilosophers/Chopstick.h; sourceTree = "<group>"; };
+		79F9A6811CD15B11002EE9EC /* Chopstick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Chopstick.m; path = Algorithms/CrackingTheCodingInterview/KnowledgeBased/ThreadsAndLocks/DiningPhilosophers/Chopstick.m; sourceTree = "<group>"; };
+		79F9A6841CD15B2E002EE9EC /* Philosopher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Philosopher.h; path = Algorithms/CrackingTheCodingInterview/KnowledgeBased/ThreadsAndLocks/DiningPhilosophers/Philosopher.h; sourceTree = "<group>"; };
+		79F9A6851CD15B2E002EE9EC /* Philosopher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Philosopher.m; path = Algorithms/CrackingTheCodingInterview/KnowledgeBased/ThreadsAndLocks/DiningPhilosophers/Philosopher.m; sourceTree = "<group>"; };
+		79F9A6891CD382AD002EE9EC /* OrderExecuteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrderExecuteObject.h; path = Algorithms/CrackingTheCodingInterview/KnowledgeBased/ThreadsAndLocks/OrderExecuteObject/OrderExecuteObject.h; sourceTree = "<group>"; };
+		79F9A68A1CD382AD002EE9EC /* OrderExecuteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrderExecuteObject.m; path = Algorithms/CrackingTheCodingInterview/KnowledgeBased/ThreadsAndLocks/OrderExecuteObject/OrderExecuteObject.m; sourceTree = "<group>"; };
 		79FC16B71CB279AA004843CD /* BinaryTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinaryTreeNode.h; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingTreesAndGraphs/BinaryTreeNode/BinaryTreeNode.h; sourceTree = "<group>"; };
 		79FC16B81CB279AA004843CD /* BinaryTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BinaryTreeNode.m; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingTreesAndGraphs/BinaryTreeNode/BinaryTreeNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -509,9 +521,9 @@
 		79C5DC461CA2B968005DFD1B /* CrackingTheCodingInterview */ = {
 			isa = PBXGroup;
 			children = (
-				79F9A40E1CCFEC60002EE9EC /* KnowledgeBased */,
 				793D3D101CB7BE3800CB16AB /* CrackingConceptsAndAlgorithms */,
 				79C5DC471CA2B9AD005DFD1B /* CrackingDataStructures */,
+				79F9A40E1CCFEC60002EE9EC /* KnowledgeBased */,
 			);
 			name = CrackingTheCodingInterview;
 			sourceTree = "<group>";
@@ -562,6 +574,7 @@
 			isa = PBXGroup;
 			children = (
 				79F9A40F1CCFECAD002EE9EC /* C&C++ */,
+				79F9A67E1CD15A71002EE9EC /* ThreadsAndLocks */,
 			);
 			name = KnowledgeBased;
 			sourceTree = "<group>";
@@ -592,6 +605,35 @@
 				79F9A4201CD0157A002EE9EC /* MySmartPointer.cpp */,
 			);
 			name = MySmartPointer;
+			sourceTree = "<group>";
+		};
+		79F9A67E1CD15A71002EE9EC /* ThreadsAndLocks */ = {
+			isa = PBXGroup;
+			children = (
+				79F9A67F1CD15AC3002EE9EC /* DiningPhilosophers */,
+				79F9A6881CD38268002EE9EC /* OrderExecuteObject */,
+			);
+			name = ThreadsAndLocks;
+			sourceTree = "<group>";
+		};
+		79F9A67F1CD15AC3002EE9EC /* DiningPhilosophers */ = {
+			isa = PBXGroup;
+			children = (
+				79F9A6801CD15B11002EE9EC /* Chopstick.h */,
+				79F9A6811CD15B11002EE9EC /* Chopstick.m */,
+				79F9A6841CD15B2E002EE9EC /* Philosopher.h */,
+				79F9A6851CD15B2E002EE9EC /* Philosopher.m */,
+			);
+			name = DiningPhilosophers;
+			sourceTree = "<group>";
+		};
+		79F9A6881CD38268002EE9EC /* OrderExecuteObject */ = {
+			isa = PBXGroup;
+			children = (
+				79F9A6891CD382AD002EE9EC /* OrderExecuteObject.h */,
+				79F9A68A1CD382AD002EE9EC /* OrderExecuteObject.m */,
+			);
+			name = OrderExecuteObject;
 			sourceTree = "<group>";
 		};
 		79FC16B61CB27777004843CD /* BinaryTreeNode */ = {
@@ -717,6 +759,7 @@
 				79B3CB1A1CAD441B00D7DB97 /* SetOfStacks.m in Sources */,
 				79C5DC261CA2B8FC005DFD1B /* ViewController.m in Sources */,
 				79B3CB151CAD3E3B00D7DB97 /* StackWithMinimum.m in Sources */,
+				79F9A6821CD15B11002EE9EC /* Chopstick.m in Sources */,
 				79B95E7C1CCE590E00D171D9 /* BinarySearchTreeNode.m in Sources */,
 				79F9A4221CD0157A002EE9EC /* MySmartPointer.cpp in Sources */,
 				793D3D141CB7BF6A00CB16AB /* CrackingBitManipulation.m in Sources */,
@@ -733,7 +776,9 @@
 				799CCE621CBFD07A009CB3C6 /* HashTableCell.m in Sources */,
 				79B95E771CCE36FC00D171D9 /* RankingNumbers.m in Sources */,
 				79C5DC201CA2B8FC005DFD1B /* main.m in Sources */,
+				79F9A68B1CD382AD002EE9EC /* OrderExecuteObject.m in Sources */,
 				799CCE6A1CC02B29009CB3C6 /* CrackingRecursionAndDP.m in Sources */,
+				79F9A6861CD15B2E002EE9EC /* Philosopher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -743,10 +788,12 @@
 			files = (
 				79F9A41E1CD0154F002EE9EC /* MyCppClass.cpp in Sources */,
 				79B3CB331CB0747C00D7DB97 /* CrackingTreesAndGraphs.m in Sources */,
+				79F9A6871CD15B2E002EE9EC /* Philosopher.m in Sources */,
 				79B3CB251CAE94FC00D7DB97 /* AnimalShelter.m in Sources */,
 				79AF04321CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m in Sources */,
 				79689AFD1CA882B10078DCB7 /* LinkedListNode.m in Sources */,
 				793D3D0E1CB3D5EC00CB16AB /* GraphNode.m in Sources */,
+				79F9A6831CD15B11002EE9EC /* Chopstick.m in Sources */,
 				79FC16BA1CB279AA004843CD /* BinaryTreeNode.m in Sources */,
 				799CCE6B1CC02B29009CB3C6 /* CrackingRecursionAndDP.m in Sources */,
 				7946C4761CAB166D001F0758 /* Stack.m in Sources */,
@@ -764,6 +811,7 @@
 				7946C4701CAB1524001F0758 /* CrackingStacksAndQueuesTest.m in Sources */,
 				79B95E7D1CCE590E00D171D9 /* BinarySearchTreeNode.m in Sources */,
 				79689AF61CA878AE0078DCB7 /* CrackingLinkedLists.m in Sources */,
+				79F9A68C1CD382AD002EE9EC /* OrderExecuteObject.m in Sources */,
 				79B3CB1B1CAD441B00D7DB97 /* SetOfStacks.m in Sources */,
 				79C5DC4F1CA2BB55005DFD1B /* CrackingArraysAndStringsTest.m in Sources */,
 				799CCE5F1CBFCE7A009CB3C6 /* HashTable.m in Sources */,
