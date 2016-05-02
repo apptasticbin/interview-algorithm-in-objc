@@ -40,15 +40,18 @@
 
 - (void)methed1 {
     dispatch_semaphore_signal(self.semaphore1);
+    NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
 - (void)method2 {
     dispatch_semaphore_wait(self.semaphore1, DISPATCH_TIME_FOREVER);
     dispatch_semaphore_signal(self.semaphore2);
+    NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
 - (void)method3 {
     dispatch_semaphore_wait(self.semaphore2, DISPATCH_TIME_FOREVER);
+    NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
 @end
