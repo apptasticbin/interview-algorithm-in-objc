@@ -42,6 +42,9 @@
 		79A9F22A1CDB415800274111 /* BiNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A9F2281CDB415800274111 /* BiNode.m */; };
 		79A9F22E1CDB41D700274111 /* XML.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A9F22D1CDB41D700274111 /* XML.m */; };
 		79A9F22F1CDB41D700274111 /* XML.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A9F22D1CDB41D700274111 /* XML.m */; };
+		79A9F2331CDC780200274111 /* Hard.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A9F2321CDC780200274111 /* Hard.m */; };
+		79A9F2341CDC780200274111 /* Hard.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A9F2321CDC780200274111 /* Hard.m */; };
+		79A9F23B1CDC8EC200274111 /* HardQuestionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A9F23A1CDC8EC200274111 /* HardQuestionsTest.m */; };
 		79AF04311CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AF04301CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m */; };
 		79AF04321CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AF04301CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m */; };
 		79B3CB151CAD3E3B00D7DB97 /* StackWithMinimum.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CB141CAD3E3B00D7DB97 /* StackWithMinimum.m */; };
@@ -75,6 +78,8 @@
 		79DDA8071CC822730085E61A /* CrackingSortingAndSearching.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA8061CC822730085E61A /* CrackingSortingAndSearching.m */; };
 		79DDA8081CC822730085E61A /* CrackingSortingAndSearching.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA8061CC822730085E61A /* CrackingSortingAndSearching.m */; };
 		79DFF78F1CC10C5B00AD3C48 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79DFF78E1CC10C5B00AD3C48 /* UIKit.framework */; };
+		79F54B3E1CDFBA0A00956AD0 /* SuffixTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F54B3D1CDFBA0A00956AD0 /* SuffixTree.m */; };
+		79F54B3F1CDFBA0A00956AD0 /* SuffixTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F54B3D1CDFBA0A00956AD0 /* SuffixTree.m */; };
 		79F9A41D1CD0154F002EE9EC /* MyCppClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A41B1CD0154F002EE9EC /* MyCppClass.cpp */; };
 		79F9A41E1CD0154F002EE9EC /* MyCppClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A41B1CD0154F002EE9EC /* MyCppClass.cpp */; };
 		79F9A4221CD0157A002EE9EC /* MySmartPointer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A4201CD0157A002EE9EC /* MySmartPointer.cpp */; };
@@ -139,6 +144,9 @@
 		79A9F2281CDB415800274111 /* BiNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BiNode.m; path = Algorithms/CrackingTheCodingInterview/ModerateQuestions/BiNode/BiNode.m; sourceTree = "<group>"; };
 		79A9F22C1CDB41D700274111 /* XML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XML.h; path = Algorithms/CrackingTheCodingInterview/ModerateQuestions/XML/XML.h; sourceTree = "<group>"; };
 		79A9F22D1CDB41D700274111 /* XML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XML.m; path = Algorithms/CrackingTheCodingInterview/ModerateQuestions/XML/XML.m; sourceTree = "<group>"; };
+		79A9F2311CDC780200274111 /* Hard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Hard.h; path = Algorithms/CrackingTheCodingInterview/Hard/Hard.h; sourceTree = "<group>"; };
+		79A9F2321CDC780200274111 /* Hard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Hard.m; path = Algorithms/CrackingTheCodingInterview/Hard/Hard.m; sourceTree = "<group>"; };
+		79A9F23A1CDC8EC200274111 /* HardQuestionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HardQuestionsTest.m; path = CrackingTheCodingInterviewTests/HardQuestionsTest/HardQuestionsTest.m; sourceTree = "<group>"; };
 		79AF042F1CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixedSizeArrayThreesomeStack.h; sourceTree = "<group>"; };
 		79AF04301CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FixedSizeArrayThreesomeStack.m; sourceTree = "<group>"; };
 		79B3CB131CAD3E3B00D7DB97 /* StackWithMinimum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StackWithMinimum.h; path = Algorithms/CrackingTheCodingInterview/CrackingDataStructures/CrackingStacksAndQueues/StackWithMinimum/StackWithMinimum.h; sourceTree = "<group>"; };
@@ -178,6 +186,8 @@
 		79DDA8051CC822730085E61A /* CrackingSortingAndSearching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrackingSortingAndSearching.h; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingSortingAndSearching/CrackingSortingAndSearching.h; sourceTree = "<group>"; };
 		79DDA8061CC822730085E61A /* CrackingSortingAndSearching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrackingSortingAndSearching.m; path = Algorithms/CrackingTheCodingInterview/CrackingConceptsAndAlgorithms/CrackingSortingAndSearching/CrackingSortingAndSearching.m; sourceTree = "<group>"; };
 		79DFF78E1CC10C5B00AD3C48 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		79F54B3C1CDFBA0A00956AD0 /* SuffixTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuffixTree.h; path = Algorithms/CrackingTheCodingInterview/Hard/SuffixTree/SuffixTree.h; sourceTree = "<group>"; };
+		79F54B3D1CDFBA0A00956AD0 /* SuffixTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuffixTree.m; path = Algorithms/CrackingTheCodingInterview/Hard/SuffixTree/SuffixTree.m; sourceTree = "<group>"; };
 		79F9A41B1CD0154F002EE9EC /* MyCppClass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyCppClass.cpp; sourceTree = "<group>"; };
 		79F9A41C1CD0154F002EE9EC /* MyCppClass.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MyCppClass.hpp; sourceTree = "<group>"; };
 		79F9A4201CD0157A002EE9EC /* MySmartPointer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MySmartPointer.cpp; path = "Algorithms/CrackingTheCodingInterview/KnowledgeBased/C&C++/MySmartPointer/MySmartPointer.cpp"; sourceTree = "<group>"; };
@@ -387,6 +397,24 @@
 			name = XML;
 			sourceTree = "<group>";
 		};
+		79A9F2301CDC771700274111 /* Hard */ = {
+			isa = PBXGroup;
+			children = (
+				79A9F2311CDC780200274111 /* Hard.h */,
+				79A9F2321CDC780200274111 /* Hard.m */,
+				79F54B3B1CDFB98B00956AD0 /* SuffixTree */,
+			);
+			name = Hard;
+			sourceTree = "<group>";
+		};
+		79A9F2351CDC8E4400274111 /* HardQuestionsTest */ = {
+			isa = PBXGroup;
+			children = (
+				79A9F23A1CDC8EC200274111 /* HardQuestionsTest.m */,
+			);
+			name = HardQuestionsTest;
+			sourceTree = "<group>";
+		};
 		79AF042E1CAC6F3B002C89D2 /* FixedSizeArrayThreesomeStack */ = {
 			isa = PBXGroup;
 			children = (
@@ -553,10 +581,11 @@
 		79C5DC461CA2B968005DFD1B /* CrackingTheCodingInterview */ = {
 			isa = PBXGroup;
 			children = (
-				79F9A68D1CD73CDE002EE9EC /* ModerateQuestions */,
 				793D3D101CB7BE3800CB16AB /* CrackingConceptsAndAlgorithms */,
 				79C5DC471CA2B9AD005DFD1B /* CrackingDataStructures */,
 				79F9A40E1CCFEC60002EE9EC /* KnowledgeBased */,
+				79A9F2301CDC771700274111 /* Hard */,
+				79F9A68D1CD73CDE002EE9EC /* ModerateQuestions */,
 			);
 			name = CrackingTheCodingInterview;
 			sourceTree = "<group>";
@@ -577,6 +606,7 @@
 			children = (
 				793D3D161CB8606D00CB16AB /* CrackingConceptsAndAlgorithmsTest */,
 				79C5DC4D1CA2BB01005DFD1B /* CrackingDataStructuresTest */,
+				79A9F2351CDC8E4400274111 /* HardQuestionsTest */,
 				79F9A6AC1CD7DE81002EE9EC /* ModerateQuestionsTest */,
 			);
 			name = CrackingTheCodingInterviewTests;
@@ -602,6 +632,15 @@
 				79B95E741CCE35B600D171D9 /* RankingNumbers */,
 			);
 			name = CrackingSortingAndSearching;
+			sourceTree = "<group>";
+		};
+		79F54B3B1CDFB98B00956AD0 /* SuffixTree */ = {
+			isa = PBXGroup;
+			children = (
+				79F54B3C1CDFBA0A00956AD0 /* SuffixTree.h */,
+				79F54B3D1CDFBA0A00956AD0 /* SuffixTree.m */,
+			);
+			name = SuffixTree;
 			sourceTree = "<group>";
 		};
 		79F9A40E1CCFEC60002EE9EC /* KnowledgeBased */ = {
@@ -800,6 +839,7 @@
 			files = (
 				7946C4751CAB166D001F0758 /* Stack.m in Sources */,
 				79B3CB2D1CAE9C4300D7DB97 /* LinkedObjectListNode.m in Sources */,
+				79A9F2331CDC780200274111 /* Hard.m in Sources */,
 				79683B2A1CC4F5DB002887CE /* Matrix.m in Sources */,
 				79B3CB241CAE94FC00D7DB97 /* AnimalShelter.m in Sources */,
 				79F9A41D1CD0154F002EE9EC /* MyCppClass.cpp in Sources */,
@@ -808,6 +848,7 @@
 				79231A971CBD9E8200E1D566 /* CrackingMathematicsAndProbability.m in Sources */,
 				79F9A6AA1CD7DE4A002EE9EC /* ModerateQuestions.m in Sources */,
 				79FC16B91CB279AA004843CD /* BinaryTreeNode.m in Sources */,
+				79F54B3E1CDFBA0A00956AD0 /* SuffixTree.m in Sources */,
 				79DDA8071CC822730085E61A /* CrackingSortingAndSearching.m in Sources */,
 				79689AF51CA878AE0078DCB7 /* CrackingLinkedLists.m in Sources */,
 				79B3CB1A1CAD441B00D7DB97 /* SetOfStacks.m in Sources */,
@@ -862,11 +903,13 @@
 				79B3CB161CAD3E3B00D7DB97 /* StackWithMinimum.m in Sources */,
 				79683B2B1CC4F5DB002887CE /* Matrix.m in Sources */,
 				793D3D151CB7BF6A00CB16AB /* CrackingBitManipulation.m in Sources */,
+				79A9F23B1CDC8EC200274111 /* HardQuestionsTest.m in Sources */,
 				799CCE631CBFD07A009CB3C6 /* HashTableCell.m in Sources */,
 				799CCE6D1CC045AF009CB3C6 /* CrackingRecursionAndDPTest.m in Sources */,
 				79689AF81CA878CB0078DCB7 /* CrackingLinkedListsTest.m in Sources */,
 				79B95E781CCE36FC00D171D9 /* RankingNumbers.m in Sources */,
 				79D342161CC82AB300D65BCD /* CrackingSortingAndSearchingTest.m in Sources */,
+				79F54B3F1CDFBA0A00956AD0 /* SuffixTree.m in Sources */,
 				7946C4701CAB1524001F0758 /* CrackingStacksAndQueuesTest.m in Sources */,
 				79B95E7D1CCE590E00D171D9 /* BinarySearchTreeNode.m in Sources */,
 				79689AF61CA878AE0078DCB7 /* CrackingLinkedLists.m in Sources */,
@@ -877,6 +920,7 @@
 				799CCE5F1CBFCE7A009CB3C6 /* HashTable.m in Sources */,
 				79231A981CBD9E8200E1D566 /* CrackingMathematicsAndProbability.m in Sources */,
 				79DDA8081CC822730085E61A /* CrackingSortingAndSearching.m in Sources */,
+				79A9F2341CDC780200274111 /* Hard.m in Sources */,
 				79B3CB351CB0749A00D7DB97 /* CrackingTreesAndGraphsTest.m in Sources */,
 				79B3CB291CAE952300D7DB97 /* Animal.m in Sources */,
 				79F9A4231CD0157A002EE9EC /* MySmartPointer.cpp in Sources */,
